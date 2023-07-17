@@ -1,0 +1,17 @@
+{
+  "cliente":[
+    {
+      "nome": "barbara castro",
+      "id": 1
+    }
+  ],
+  "medico": [
+    {
+      "doutor": "thiago",
+      "id": 1,
+      "especializacao": "dermatologista"
+    }
+  ],
+  "horarios": [],
+  "agendamentos": []
+}

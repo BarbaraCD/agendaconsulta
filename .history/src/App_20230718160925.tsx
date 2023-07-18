@@ -1,6 +1,7 @@
 import './styles/global'
 import { Header } from './components/Headers/Headers'
 import { Sidebar } from './components/Sidebar/Sidebar'
+import { Agendamentos } from './components/Agendamentos/Agendamentos'
 import GlobalStyle from './styles/global'
 
 

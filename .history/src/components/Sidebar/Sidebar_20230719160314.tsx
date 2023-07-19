@@ -6,17 +6,9 @@ import { StyledSidebar } from './Sidebar.styles'
 export function Sidebar(){
   return (
     <StyledSidebar>
-        <ul>
-          <li>
-            <Horarios />
-          </li>
-          <li>
-            <Pacientes />
-          </li>
-          <li>
-            <Medicos />
-          </li>
-        </ul>
+        <Horarios />
+        <Pacientes />
+        <Medicos />
     </StyledSidebar>
   )
 }

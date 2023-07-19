@@ -8,24 +8,19 @@
       "id": 1
     }
   ],
-
   "medico": [
     {
       "doutor": "thiago",
+      "id": 1,
       "crm": 22071,
-      "especializacao": "dermatologista",
-      "id": 1
+      "especializacao": "dermatologista"
     }
   ],
-
   "agendamentos": [
     {
       "medicoId": 1,
       "clienteId": 1,
-      "data": "date",
-      "horario": "10:00",
-      "motivo": "dor nos rins",
-      "id": 1
+      "data": "date"
     }
   ]
 }

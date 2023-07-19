@@ -1,6 +1,3 @@
-import { Horarios } from '../horarios/Horarios'
-import { Medicos } from '../medicos/Medicos'
-import { Pacientes } from '../pacientes/Pacientes'
 import { StyledSidebar } from './Sidebar.styles'
 
 export function Sidebar(){
@@ -8,13 +5,13 @@ export function Sidebar(){
     <StyledSidebar>
         <ul>
           <li>
-            <Horarios />
+            <span>agendamentos</span>
           </li>
           <li>
-            <Pacientes />
+            <span>medico</span>
           </li>
           <li>
-            <Medicos />
+            <span>clientes</span>
           </li>
         </ul>
     </StyledSidebar>

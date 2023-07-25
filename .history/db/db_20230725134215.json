@@ -1,0 +1,52 @@
+{
+  "patient":[
+    {
+      "name": "barbara castro",
+      "age": 26,
+      "telephone": 64999829815,
+      "email": "barbaracastrod7@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "lorena castro",
+      "age": 31,
+      "telephone": 64999829789,
+      "email": "lorenacastro@gmail.com",
+      "id": 2
+    }
+  ],
+
+  "doctor": [
+    {
+      "name": "thiago",
+      "crm": 22071,
+      "specialization": "dermatologista",
+      "id": 1
+    },
+    {
+      "doutor": "beatriz",
+      "crm": 22896,
+      "specialization": "gastroenterologista",
+      "id": 2
+    }
+  ],
+
+  "appointment": [
+    {
+      "doctorId": 2,
+      "patientId": 1,
+      "data": "date",
+      "hour": "10:00",
+      "symptoms": "dor no estomago",
+      "id": 1
+    },
+    {
+      "doctorId": 1,
+      "patientId": 2,
+      "data": "date",
+      "hour": "12:00",
+      "symptoms": "coceira no pescoço",
+      "id": 2
+    }
+  ]
+}

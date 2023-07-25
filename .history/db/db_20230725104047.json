@@ -1,0 +1,44 @@
+{
+  "paciente":[
+    {
+      "nome": "barbara castro",
+      "idade": 26,
+      "telefone": 64999829815,
+      "email": "barbaracastrod7@gmail.com",
+      "id": 1
+    },
+    {
+      "nome": "lorena castro",
+      "idade": 31,
+      "telefone": 64999829789,
+      "email": "lorenacastro@gmail.com",
+      "id": 2
+    }
+  ],
+
+  "medico": [
+    {
+      "doutor": "thiago",
+      "crm": 22071,
+      "especializacao": "dermatologista",
+      "id": 1
+    },
+    {
+      "doutor": "beatriz",
+      "crm": 22896,
+      "especializacao": "gastroenterologista",
+      "id": 2
+    }
+  ],
+
+  "agendamentos": [
+    {
+      "medicoId": 1,
+      "clienteId": 1,
+      "data": "date",
+      "horario": "10:00",
+      "motivo": "dor nos rins",
+      "id": 1
+    }
+  ]
+}

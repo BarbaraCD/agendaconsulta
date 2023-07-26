@@ -1,0 +1,17 @@
+{
+  "doctor": [
+    {
+      "name": "thiago",
+      "crm": 22071,
+      "specialization": "dermatologista",
+      "id": 1
+    },
+    {
+      "name": "beatriz",
+      "crm": 22896,
+      "specialization": "gastroenterologista",
+      "id": 2
+    }
+  ]
+
+}

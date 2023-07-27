@@ -1,5 +1,5 @@
 {
-  "patient":[
+  "patient": [
     {
       "name": "barbara castro",
       "age": 26,
@@ -13,9 +13,15 @@
       "telephone": 64999829789,
       "email": "lorenacastro@gmail.com",
       "id": 2
+    },
+    {
+      "name": "BARBARA CASTRO DINIZ",
+      "age": 32,
+      "telephone": 649998796,
+      "email": "barbaracastrod7@gmail.com",
+      "id": 3
     }
   ],
-
   "doctor": [
     {
       "name": "thiago",
@@ -28,9 +34,14 @@
       "crm": 22896,
       "specialization": "gastroenterologista",
       "id": 2
+    },
+    {
+      "name": "BARBARA CASTRO DINIZ",
+      "crm": 59852,
+      "specialization": "gastroenterologista",
+      "id": 3
     }
   ],
-
   "appointment": [
     {
       "doctorId": 2,

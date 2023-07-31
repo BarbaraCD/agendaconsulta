@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { createPatient } from "../services/patient.services";
 
 interface Patient {
   id: number;

@@ -19,7 +19,7 @@ export const AppointmentsCalendar = () => {
 
   const availableEvents: Event[] =[
     {
-      title: 'Consulta',
+      title: 'Horario disponível',
       start: moment().toDate(),
       end: moment().add(50, 'minutes').toDate(),
     }
@@ -42,7 +42,7 @@ export const AppointmentsCalendar = () => {
       <Calendar
         localizer={localizer}
         events={availableEvents}
-        defaultView='month'
+        defaultView='week'
         selectable
         popup
         style={{ height: 500 }}

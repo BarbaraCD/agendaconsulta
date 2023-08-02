@@ -17,9 +17,9 @@ export const AppointmentsCalendar = () => {
 
   const [selectedDate, setSelectedDate] = useState<Date | null>(null)
 
-  const availableEvents: Event[] =[
+  const availableEvent: Event[] =[
     {
-      title: 'Consulta',
+      title: 'Horario disponível',
       start: moment().toDate(),
       end: moment().add(50, 'minutes').toDate(),
     }
@@ -28,27 +28,23 @@ export const AppointmentsCalendar = () => {
   const handleSelect = (event: Event) => {
     setSelectedDate(event.start)
   }
-
-  const handleRedirect = () => {
-    if(selectedDate){
-      console.log('redirecionando')
-    } else {
-      console.log('selecine uma data')
-    }
-  }
   
   return (
     <div>
       <Calendar
         localizer={localizer}
-        events={availableEvents}
-        defaultView='month'
+        events={[
+          {
+            title: "Evento teste", 
+            start: moment().toDate(), 
+            end: moment().add(30, 'minutes').toDate()
+          }
+        ]}
+        defaultView='week'
         selectable
         popup
         style={{ height: 500 }}
-        onSelectEvent={handleSelect}
       />
-      <StyledA onClick={handleRedirect}>Marcar Consulta</StyledA>
       <StyledA href="/appointments">Voltar</StyledA>
     </div>
   )

@@ -1,4 +1,4 @@
-
+import space from "antd/es/space";
 import { styled } from "styled-components"
 
 export const StyledAppointments = styled.div``

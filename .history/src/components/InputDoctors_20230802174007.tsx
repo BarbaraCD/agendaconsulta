@@ -14,7 +14,7 @@ interface InputDoctorsProps{
 export function InputDoctors(props: InputDoctorsProps) {
   const [crm, setCrm] = useState<number | ''>(props.crm);
 
-  const handleCrmChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleTelephoneChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     const numericValue = value.replace(/\D/g, '');
     const limitedValue = numericValue.slice(0, 5);
@@ -41,7 +41,7 @@ export function InputDoctors(props: InputDoctorsProps) {
             type="text"
             name="crm"
             value={props.crm}
-            onChange={handleCrmChange}
+            onChange={(event) => props.onCrmChange(Number(event.target.value))}
             placeholder='Número do CRM'
           />
         </label>

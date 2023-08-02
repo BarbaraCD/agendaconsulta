@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { InputContainer } from '../styles/InputContainer'
+import { useForm } from 'react-hook-form'
 
 interface InputPatientsProps{
   name: string
@@ -13,8 +14,8 @@ interface InputPatientsProps{
 }
 
 export function InputPatients(props: InputPatientsProps) {
+  const { register } = useForm()
   const [telephone, setTelephone] = useState<number | ''>(props.telephone);
-  const [age, setAge] = useState<number | ''>(props.age);
 
   const handleTelephoneChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
@@ -22,14 +23,6 @@ export function InputPatients(props: InputPatientsProps) {
     const limitedValue = numericValue.slice(0, 11);
     setTelephone(limitedValue === '' ? '' : Number(limitedValue));
     props.onTelephoneChange(Number(limitedValue));
-  }
-
-  const handleAgeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    const numericValue = value.replace(/\D/g, '');
-    const limitedValue = numericValue.slice(0, 2);
-    setAge(limitedValue === '' ? '' : Number(limitedValue));
-    props.onAgeChange(Number(limitedValue));
   }
 
   return (
@@ -51,7 +44,7 @@ export function InputPatients(props: InputPatientsProps) {
             type="text"
             name="idade"
             value={props.age}
-            onChange={handleAgeChange}
+            onChange={(event) => props.onAgeChange(Number(event.target.value))}
             placeholder='idade'
           />
         </label>

@@ -5,25 +5,17 @@ import { Patients, PatientsProps } from './Patients';
 import { Doctors, DoctorsProps } from './Doctors';
 import { SubmitButton } from './SubmitButton';
 
-export type AppointmentsProps = {
-  doctorID: number
-  patientId: number
-  data: string
-  hour: string
-  symptoms: string
-}
-
 export const Appointments: React.FC = () => {
 
-  const [selectedDoctor, setSelectedDoctor] = useState<DoctorsProps[]>([]);
-  const [selectedPatient, setSelectedPatient] = useState<PatientsProps[]>([]);
+  const [selectedMedico, setSelectedMedico] = useState<DoctorsProps | null>(null);
+  const [selectedPaciente, setSelectedPaciente] = useState<PatientsProps | null>(null);
 
   const handleDoctorSelection = (doctor: DoctorsProps) => {
-    setSelectedDoctor(doctor);
+    setSelectedMedico(doctor);
   };
 
   const handlePatientSelection = (patient: PatientsProps) => {
-    setSelectedPatient(patient);
+    setSelectedPaciente(patient);
   }
 
   const handleAgendarConsulta = () => {}
@@ -33,19 +25,19 @@ export const Appointments: React.FC = () => {
       <StyledA href="/calendar">Agenda</StyledA>
       <h2>Lista de Médicos</h2>
       <div>
-        {doctor.map((medico) => (
-          <Doctors key={doctor.id} {...doctor} onClick={() => handleMedicoSelection(doctor)} />
+        {medicos.map((medico) => (
+          <Doctors key={medico.id} {...medico} onClick={() => handleMedicoSelection(medico)} />
         ))}
       </div>
 
       <h2>Lista de Pacientes</h2>
       <div>
-        {patients.map((patient) => (
-          <Patients key={patient.id} {...patient} onClick={() => handlePatientSelection(patient)} />
+        {pacientes.map((paciente) => (
+          <Patients key={paciente.id} {...paciente} onClick={() => handlePacienteSelection(paciente)} />
         ))}
       </div>
 
-      <SubmitButton onClick={handleAgendarConsulta} />
+      <SubmitButton onClick={handleAgendarConsulta}>Agendar Consulta />
 
 
     </StyledAppointments>

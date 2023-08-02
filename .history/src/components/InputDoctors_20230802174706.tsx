@@ -29,7 +29,7 @@ export function InputDoctors(props: InputDoctorsProps) {
           <input
             type="text"
             name="nome"
-            value={props.name.toUpperCase()}
+            value={props.name}
             onChange={(event) => props.onNameChange(event.target.value)}
             placeholder='Gercina da Silva'
           />

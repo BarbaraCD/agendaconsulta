@@ -41,7 +41,7 @@ export function InputDoctors(props: InputDoctorsProps) {
             type="text"
             name="crm"
             value={props.crm}
-            onChange={handleCrmChange}
+            onChange={handleCrmChange(crm)}
             placeholder='Número do CRM'
           />
         </label>

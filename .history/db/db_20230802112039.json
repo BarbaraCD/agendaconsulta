@@ -20,46 +20,25 @@
       "telephone": 649998796,
       "email": "barbaracastrod7@gmail.com",
       "id": 3
-    },
-    {
-      "name": "FERNANDA DINIz",
-      "age": 19,
-      "telephone": 64982647896,
-      "email": "teste@teste.com",
-      "id": 4
-    },
-    {
-      "name": "JOYCE RODRIGUEs",
-      "age": 22,
-      "telephone": 62992989693,
-      "email": "joyce@gmail.com",
-      "id": 5
-    },
-    {
-      "name": "FLORA WINx",
-      "age": 35,
-      "telephone": 64984162356,
-      "email": "florawinx@teste.com",
-      "id": 6
     }
   ],
   "doctor": [
     {
-      "name": "BARBARA CASTRO DINIZ",
-      "crm": 59852,
-      "specialization": "gastroenterologista",
+      "name": "thiago",
+      "crm": 22071,
+      "specialization": "dermatologista",
       "id": 1
     },
     {
-      "name": "LUIZ CARVALHO FERREIRA",
-      "crm": 89652,
-      "specialization": "PSIQUIATRA",
+      "name": "beatriz",
+      "crm": 22896,
+      "specialization": "gastroenterologista",
       "id": 2
     },
     {
-      "name": "THIAGO DA SILVA",
-      "crm": 89745,
-      "specialization": "CARDIOLOGISTA",
+      "name": "BARBARA CASTRO DINIZ",
+      "crm": 59852,
+      "specialization": "gastroenterologista",
       "id": 3
     }
   ],
@@ -75,7 +54,7 @@
     {
       "doctorId": 1,
       "patientId": 2,
-      "data": "13/08/2023",
+      "data": "date",
       "hour": "12:00",
       "symptoms": "coceira no pescoço",
       "id": 2

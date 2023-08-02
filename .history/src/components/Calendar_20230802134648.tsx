@@ -36,6 +36,8 @@ export const AppointmentsCalendar = () => {
       console.log('selecine uma data')
     }
   }
+
+  const minDate = moment('2023-06-01').toDate();
   
   return (
     <div>
@@ -47,6 +49,7 @@ export const AppointmentsCalendar = () => {
         popup
         style={{ height: 500 }}
         onSelectEvent={handleSelect}
+        min={minDate}
       />
       <StyledA onClick={handleRedirect}>Marcar Consulta</StyledA>
       <StyledA href="/appointments">Voltar</StyledA>

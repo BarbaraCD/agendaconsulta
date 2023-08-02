@@ -36,12 +36,16 @@ export const AppointmentsCalendar = () => {
       console.log('selecine uma data')
     }
   }
+
+  const minDate = moment('2023-06-01').toDate()
+
+  const filteredEvents = availableEvents.filter((event) => event.start >= minDate);
   
   return (
     <div>
       <Calendar
         localizer={localizer}
-        events={availableEvents}
+        events={filteredEvents}
         defaultView='month'
         selectable
         popup

@@ -4,8 +4,9 @@ import { StyledA, StyledAppointments } from "../styles/Appointments"
 import { Patients, PatientsProps } from './Patients';
 import { Doctors, DoctorsProps } from './Doctors';
 import { SubmitButton } from './SubmitButton';
+import { date } from 'yup';
 
-export type AppointmentsProps = {
+interface AppointmentsProps{
   doctorID: number
   patientId: number
   data: string

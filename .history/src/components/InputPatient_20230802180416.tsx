@@ -51,7 +51,7 @@ export function InputPatients(props: InputPatientsProps) {
             type="text"
             name="idade"
             value={props.age}
-            onChange={handleAgeChange}
+            onChange={(event) => props.onAgeChange(Number(event.target.value))}
             placeholder='idade'
           />
         </label>

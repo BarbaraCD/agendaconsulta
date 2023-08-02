@@ -5,7 +5,7 @@ import { Patients, PatientsProps } from './Patients';
 import { Doctors, DoctorsProps } from './Doctors';
 import { SubmitButton } from './SubmitButton';
 
-export type AppointmentsProps = {
+export type AppointmentsProps{
   doctorID: number
   patientId: number
   data: string

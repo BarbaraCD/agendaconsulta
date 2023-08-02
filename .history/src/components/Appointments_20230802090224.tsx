@@ -5,25 +5,17 @@ import { Patients, PatientsProps } from './Patients';
 import { Doctors, DoctorsProps } from './Doctors';
 import { SubmitButton } from './SubmitButton';
 
-export type AppointmentsProps = {
-  doctorID: number
-  patientId: number
-  data: string
-  hour: string
-  symptoms: string
-}
-
 export const Appointments: React.FC = () => {
 
   const [selectedDoctor, setSelectedDoctor] = useState<DoctorsProps[]>([]);
-  const [selectedPatient, setSelectedPatient] = useState<PatientsProps[]>([]);
+  const [selectedPatient, setSelectedent] = useState<PatientsProps[]>([]);
 
   const handleDoctorSelection = (doctor: DoctorsProps) => {
     setSelectedDoctor(doctor);
   };
 
   const handlePatientSelection = (patient: PatientsProps) => {
-    setSelectedPatient(patient);
+    setSelectedent(patient);
   }
 
   const handleAgendarConsulta = () => {}

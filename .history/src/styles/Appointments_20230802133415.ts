@@ -1,8 +1,6 @@
-
 import { styled } from "styled-components"
 
 export const StyledAppointments = styled.div``
-
 
 export const StyledA = styled.a`
   text-decoration: none;

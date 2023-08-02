@@ -5,7 +5,7 @@ export const InputContainer = styled.div`
   color: ${(props) => props.theme.colors.black};
   font-size: ${(props) => props.theme.size.md};
   padding: 10px 0;
-  text-transform: 'uppercase';
+  textTransform: 'uppercase';
 
   h3 {
     background-color: ${(props) => props.theme.colors[100]};

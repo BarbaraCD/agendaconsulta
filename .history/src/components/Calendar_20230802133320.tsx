@@ -42,7 +42,7 @@ export const AppointmentsCalendar = () => {
       <Calendar
         localizer={localizer}
         events={availableEvents}
-        defaultView='month'
+        defaultView='week'
         selectable
         popup
         style={{ height: 500 }}

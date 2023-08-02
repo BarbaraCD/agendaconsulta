@@ -12,26 +12,17 @@ interface InputPatientsProps{
   onEmailChange: (value: string) => void
 }
 
-export function InputPatients(props: InputPatientsProps) {
-  const [telephone, setTelephone] = useState<number | ''>(props.telephone);
-  const [age, setAge] = useState<number | ''>(props.age);
+const [telephone, setTelephone] = useState<number | ''>(props.telephone);
 
   const handleTelephoneChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     const numericValue = value.replace(/\D/g, '');
-    const limitedValue = numericValue.slice(0, 11);
+    const limitedValue = numericValue.slice(0, 9);
     setTelephone(limitedValue === '' ? '' : Number(limitedValue));
     props.onTelephoneChange(Number(limitedValue));
-  }
+  };
 
-  const handleAgeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    const numericValue = value.replace(/\D/g, '');
-    const limitedValue = numericValue.slice(0, 2);
-    setAge(limitedValue === '' ? '' : Number(limitedValue));
-    props.onAgeChange(Number(limitedValue));
-  }
-
+export function InputPatients(props: InputPatientsProps) {
   return (
     <InputContainer>
         <label>
@@ -51,7 +42,7 @@ export function InputPatients(props: InputPatientsProps) {
             type="text"
             name="idade"
             value={props.age}
-            onChange={handleAgeChange}
+            onChange={(event) => props.onAgeChange(Number(event.target.value))}
             placeholder='idade'
           />
         </label>

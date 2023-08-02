@@ -36,6 +36,8 @@ export const AppointmentsCalendar = () => {
       console.log('selecine uma data')
     }
   }
+
+  const minDate = moment('2023-06-01').toDate();
   
   return (
     <div>

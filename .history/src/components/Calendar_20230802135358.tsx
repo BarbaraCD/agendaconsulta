@@ -17,7 +17,7 @@ export const AppointmentsCalendar = () => {
 
   const [selectedDate, setSelectedDate] = useState<Date | null>(null)
 
-  const availableEvents: Event[] =[
+  let availableEvents: Event[] =[
     {
       title: 'Consulta',
       start: moment().toDate(),
@@ -36,7 +36,10 @@ export const AppointmentsCalendar = () => {
       console.log('selecine uma data')
     }
   }
-  
+
+  const minDate = moment('2023-06-01').startOf('day').toDate();
+  availableEvents = availableEvents.filter((event) => event.start >= minDate);
+
   return (
     <div>
       <Calendar

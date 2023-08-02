@@ -28,7 +28,7 @@ export function InputPatients(props: InputPatientsProps) {
     const value = event.target.value;
     const numericValue = value.replace(/\D/g, '');
     const limitedValue = numericValue.slice(0, 2);
-    setAge(limitedValue === '' ? '' : Number(limitedValue));
+    setCrm(limitedValue === '' ? '' : Number(limitedValue));
     props.onAgeChange(Number(limitedValue));
   }
 
@@ -51,7 +51,7 @@ export function InputPatients(props: InputPatientsProps) {
             type="text"
             name="idade"
             value={props.age}
-            onChange={handleAgeChange}
+            onChange={(event) => props.onAgeChange(Number(event.target.value))}
             placeholder='idade'
           />
         </label>

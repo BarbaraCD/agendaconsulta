@@ -1,0 +1,40 @@
+import React, { useState } from 'react'
+
+import { StyledA, StyledAppointments } from "../styles/Appointments"
+import { DoctorsProps } from './Doctors'
+import { createDoctor, getDoctors } from '../services/doctor.services'
+import { SubmitButton } from './SubmitButton'
+import { Select } from 'antd'
+
+export type AppointmentsProps = {
+  doctorID: number
+  patientId: number
+  data: string
+  hour: string
+  symptoms: string
+}
+
+export const Appointments: React.FC = () => {
+  const [doctors, setDoctors] = useState<DoctorsProps[]>([])
+  const [selectedDoctor, setSelectedDoctor] = useState<Doctor | null>(null);
+
+
+
+  const handleAgendarConsulta = () => {}
+
+  return (
+    <StyledAppointments>
+      <div>
+        <Select placeholder='selecione um médico'>
+          {doctor.map((doctor) => (
+          <Select.Option key={doctor.id} value={doctor.name}>{doctor.name}</Select.Option> 
+          ))}
+        </Select>
+
+      </div>
+
+      <StyledA href="/calendar">Agenda</StyledA>
+      <SubmitButton onClick={handleAgendarConsulta} />
+    </StyledAppointments>
+  )
+}

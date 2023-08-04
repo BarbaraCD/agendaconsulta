@@ -17,7 +17,6 @@ import { Input, Select, TimePicker } from 'antd'
 import { DoctorsProps } from './Doctors'
 import { PatientsProps } from './Patients'
 import { SubmitButton } from './SubmitButton'
-import { date } from 'yup';
 
 export type AppointmentsProps = {
   doctorID: number
@@ -145,15 +144,6 @@ export const Appointments: React.FC = () => {
 
 
   const [date, setDate] = useState(new Date());
-  const [startDate, setStartDate] = useState();
-  const [endDate, setEndDate] = useState();
-
-  const handleChange = (range) => {
-    const [startDate, endDate] = range;
-    setStartDate(startDate);
-    setEndDate(endDate);
-  };
-
 
   return (
     <StyledAppointments>

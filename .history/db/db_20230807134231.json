@@ -1,0 +1,84 @@
+{
+  "patient": [
+    {
+      "name": "BARBARA CASTRO DINIZ",
+      "age": 32,
+      "telephone": 649998796,
+      "email": "barbaracastrod7@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "FERNANDA DINIZ",
+      "age": 19,
+      "telephone": 64982647896,
+      "email": "teste@teste.com",
+      "id": 2
+    },
+    {
+      "name": "JOYCE RODRIGUES",
+      "age": 22,
+      "telephone": 62992989693,
+      "email": "joyce@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "FLORA WINX",
+      "age": 35,
+      "telephone": 64984162356,
+      "email": "florawinx@teste.com",
+      "id": 4
+    },
+    {
+      "name": "KARINNY MARTINS",
+      "age": 23,
+      "telephone": 649998796,
+      "email": "karinny@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "THAYNARA DA SILVA",
+      "age": 32,
+      "telephone": 649998796,
+      "email": "barbaracastrod7@gmail.com",
+      "id": 1
+    },
+  ],
+  "doctor": [
+    {
+      "name": "BARBARA CASTRO DINIZ",
+      "crm": 59852,
+      "specialization": "gastroenterologista",
+      "id": 1
+    },
+    {
+      "name": "LUIZ CARVALHO FERREIRA",
+      "crm": 89652,
+      "specialization": "PSIQUIATRA",
+      "id": 2
+    },
+    {
+      "name": "THIAGO DA SILVA",
+      "crm": 89745,
+      "specialization": "CARDIOLOGISTA",
+      "id": 3
+    }
+  ],
+  "appointment": [
+    {
+      "doctorId": 2,
+      "patientId": 1,
+      "data": "12/08/2023",
+      "hour": "10:00",
+      "symptoms": "dor no estomago",
+      "id": 1
+    },
+    {
+      "doctorId": 1,
+      "patientId": 2,
+      "data": "13/08/2023",
+      "hour": "12:00",
+      "symptoms": "coceira no pescoço",
+      "id": 2
+    }
+  ]
+}

@@ -27,6 +27,27 @@
       "telephone": 64984162356,
       "email": "florawinx@teste.com",
       "id": 4
+    },
+    {
+      "name": "KARINNY MARTINS",
+      "age": 23,
+      "telephone": 649998796,
+      "email": "karinny@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "THAYNARA DA SILVA",
+      "age": 32,
+      "telephone": 649998796,
+      "email": "thaynara@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "SIOBHAN ROY",
+      "age": 30,
+      "telephone": 649998796,
+      "email": "shiv@gmail.com",
+      "id": 7
     }
   ],
   "doctor": [
@@ -53,18 +74,23 @@
     {
       "doctorId": 2,
       "patientId": 1,
-      "data": "12/08/2023",
-      "hour": "10:00",
+      "date": "12/08/2023 17:00",
       "symptoms": "dor no estomago",
       "id": 1
     },
     {
       "doctorId": 1,
       "patientId": 2,
-      "data": "13/08/2023",
-      "hour": "12:00",
+      "data": "13/08/2023 15:00",
       "symptoms": "coceira no pescoço",
       "id": 2
+    },
+    {
+      "doctorID": 2,
+      "patientId": 2,
+      "date": "2023-08-24T21:00:00.000Z",
+      "symptoms": "sdrftgh dghnd dghnxd",
+      "id": 3
     }
   ]
 }

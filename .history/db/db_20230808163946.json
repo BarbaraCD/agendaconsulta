@@ -1,0 +1,89 @@
+{
+  "patient": [
+    {
+      "name": "KARINNY MARTINS",
+      "age": 23,
+      "telephone": 649998796,
+      "email": "karinny@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "THAYNARA DA SILVA",
+      "age": 32,
+      "telephone": 649998796,
+      "email": "thaynara@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "SIOBHAN ROY",
+      "age": 30,
+      "telephone": 649998796,
+      "email": "shiv@gmail.com",
+      "id": 7
+    },
+    {
+      "name": "BARBARA CASTRO DINIZ",
+      "age": 26,
+      "telephone": 64999868599,
+      "email": "barbaracastrod7@gmail.com",
+      "id": 8
+    },
+    {
+      "name": "DAMON SALVATORE",
+      "age": 99,
+      "telephone": 64987569863,
+      "email": "damon@gmail.com",
+      "id": 9
+    },
+    {
+      "name": "SELENA GOMES",
+      "age": 30,
+      "telephone": 64932154785,
+      "email": "selena@gmail.com",
+      "id": 10
+    }
+  ],
+  "doctor": [
+    {
+      "name": "BARBARA CASTRO DINIZ",
+      "crm": 59852,
+      "specialization": "gastroenterologista",
+      "id": 1
+    },
+    {
+      "name": "LUIZ CARVALHO FERREIRA",
+      "crm": 89652,
+      "specialization": "PSIQUIATRA",
+      "id": 2
+    },
+    {
+      "name": "KENDALL ROY",
+      "crm": 89465,
+      "specialization": "DERMATOLOGISTA",
+      "id": 3
+    }
+  ],
+  "appointment": [
+    {
+      "doctorId": 2,
+      "patientId": 1,
+      "date": "2023-08-23T19:00:00.000Z",
+      "symptoms": "dor no estomago",
+      "id": 1
+    },
+    {
+      "doctorId": 1,
+      "patientId": 2,
+      "data": "2023-08-18T18:00:00.000Z",
+      "symptoms": "coceira no pescoço",
+      "id": 2
+    },
+    {
+      "doctorID": 2,
+      "patientId": 2,
+      "date": "2023-08-24T21:00:00.000Z",
+      "symptoms": "sdrftgh dghnd dghnxd",
+      "id": 3
+    }
+  ]
+}

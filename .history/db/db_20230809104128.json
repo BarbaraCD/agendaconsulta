@@ -1,0 +1,88 @@
+{
+  "patient": [
+    {
+      "name": "THAYNARA DA SILVA CARDOSO",
+      "age": 23,
+      "telephone": 64999879665,
+      "email": "thaynara@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "SIOBHAN ROY",
+      "age": 35,
+      "telephone": 64999879662,
+      "email": "shivroy@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "BARBARA CASTRO DINIZ",
+      "age": 26,
+      "telephone": 64999868599,
+      "email": "barbaracastrod7@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "DAMON SALVATORE",
+      "age": 99,
+      "telephone": 64987569863,
+      "email": "damon@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "SELENA GOMES",
+      "age": 30,
+      "telephone": 64932154785,
+      "email": "selena@gmail.com",
+      "id": 5
+    }
+  ],
+  "doctor": [
+    {
+      "name": "BARBARA CASTRO DINIZ",
+      "crm": 59852,
+      "specialization": "gastroenterologista",
+      "id": 1
+    },
+    {
+      "name": "LUIZ CARVALHO FERREIRA",
+      "crm": 89652,
+      "specialization": "PSIQUIATRA",
+      "id": 2
+    },
+    {
+      "name": "KENDALL ROY",
+      "crm": 89465,
+      "specialization": "DERMATOLOGISTA",
+      "id": 3
+    },
+    {
+      "name": "Harry Styles",
+      "crm": 89456,
+      "specialization": "Pediatra",
+      "id": 4
+    }
+  ],
+  "appointment": [
+    {
+      "doctorID": 2,
+      "patientID": 1,
+      "date": "2023-08-23T19:00:00.000Z",
+      "symptoms": "dor no estomago",
+      "id": 1
+    },
+    {
+      "doctorID": 2,
+      "patientID": 2,
+      "date": "2023-08-24T21:00:00.000Z",
+      "symptoms": "sdrftgh dghnd dghnxd",
+      "id": 2
+    },
+    {
+      "doctorID": 4,
+      "patientID": 7,
+      "date": "2023-08-18T12:00:00.000Z",
+      "symptoms": "edvhnskdj adibfvja dfignvsfhgb",
+      "id": 3
+    }
+  ]
+}

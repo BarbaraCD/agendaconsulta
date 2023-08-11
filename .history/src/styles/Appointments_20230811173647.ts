@@ -90,13 +90,11 @@ export const StyledQuestion = styled.div`
   }
 
   .button-sim {
-    justify-content: space-between;
     color: ${(props) => props.theme.colors.sbcolor};
     background-color: lightcoral;
   }
 
   .button-nao {
-    justify-content: space-between;
     color: ${(props) => props.theme.colors.primary};
     background-color: ${(props) => props.theme.colors.sbcolor};
   }

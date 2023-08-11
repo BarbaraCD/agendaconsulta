@@ -88,17 +88,9 @@ export const StyledQuestion = styled.div`
   p {
     color: ${(props) => props.theme.colors.black};
   }
-
-  .button-sim {
-    justify-content: space-between;
-    color: ${(props) => props.theme.colors.sbcolor};
+  button {
+    color: ${(props) => props.theme.colors.black};
     background-color: lightcoral;
-  }
-
-  .button-nao {
-    justify-content: space-between;
-    color: ${(props) => props.theme.colors.primary};
-    background-color: ${(props) => props.theme.colors.sbcolor};
   }
 `
 

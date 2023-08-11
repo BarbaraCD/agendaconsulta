@@ -89,18 +89,13 @@ export const StyledQuestion = styled.div`
     color: ${(props) => props.theme.colors.black};
   }
 
-  .button-sim {
-    justify-content: space-between;
-    color: ${(props) => props.theme.colors.sbcolor};
+  button {
+    color: ${(props) => props.theme.colors.black};
     background-color: lightcoral;
   }
-
-  .button-nao {
-    justify-content: space-between;
-    color: ${(props) => props.theme.colors.primary};
-    background-color: ${(props) => props.theme.colors.sbcolor};
-  }
 `
+
+export const StyledButtonSim = styled.button``
 
 export const StyledDatepicker = styled(DatePicker)`
   width: 100%;

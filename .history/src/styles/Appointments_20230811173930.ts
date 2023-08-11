@@ -90,7 +90,7 @@ export const StyledQuestion = styled.div`
   }
 
   .button-sim {
-    justify-content: space-between;
+    gap: 50px;
     color: ${(props) => props.theme.colors.sbcolor};
     background-color: lightcoral;
   }

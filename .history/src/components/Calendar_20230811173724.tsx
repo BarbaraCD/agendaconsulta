@@ -18,6 +18,7 @@ import { AppointmentsProps } from './Appointments'
 import { getDoctorById } from '../services/doctor.services'
 import { getPatientById } from '../services/patient.services'
 import {
+  CloseOutlined,
   CloseSquareOutlined,
   DeleteOutlined,
   EditOutlined,

@@ -85,18 +85,17 @@ export const StyledModal = styled(Modal)`
 `
 
 export const StyledQuestion = styled.div`
+  gap: 20px;
   p {
     color: ${(props) => props.theme.colors.black};
   }
 
   .button-sim {
-    justify-content: space-between;
     color: ${(props) => props.theme.colors.sbcolor};
     background-color: lightcoral;
   }
 
   .button-nao {
-    justify-content: space-between;
     color: ${(props) => props.theme.colors.primary};
     background-color: ${(props) => props.theme.colors.sbcolor};
   }

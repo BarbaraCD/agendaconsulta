@@ -17,12 +17,7 @@ import {
 import { AppointmentsProps } from './Appointments'
 import { getDoctorById } from '../services/doctor.services'
 import { getPatientById } from '../services/patient.services'
-import {
-  CloseSquareOutlined,
-  DeleteOutlined,
-  EditOutlined,
-  ExclamationCircleOutlined,
-} from '@ant-design/icons'
+import { DeleteOutlined, EditOutlined } from '@ant-design/icons'
 import { PatientsTypes } from '../model/patients'
 import { DoctorsTypes } from '../model/doctors'
 
@@ -157,17 +152,10 @@ export const AppointmentsCalendar = () => {
         {showDeleteConfirmation && (
           <StyledQuestion>
             <p>Tem certeza que deseja excluir?</p>
-            <button
-              className="button-sim"
-              onClick={() => confirmDelete(selectedAppointmentId!)}
-            >
-              <CloseSquareOutlined />
-              Excluir
+            <button onClick={() => confirmDelete(selectedAppointmentId!)}>
+              Sim
             </button>
-            <button className="button-nao" onClick={() => cancelDelete()}>
-              <ExclamationCircleOutlined />
-              Não
-            </button>
+            <button onClick={() => cancelDelete()}>Não</button>
           </StyledQuestion>
         )}
       </StyledModal>

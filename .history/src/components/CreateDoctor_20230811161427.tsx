@@ -10,6 +10,7 @@ import { InputDoctors } from './InputDoctors'
 import { SubmitButton } from './SubmitButton'
 import { Container, Container2, Container3 } from '../styles/CreateContainer'
 import { DoctorsTypes } from '../model/doctors'
+import { CloseOutlined } from '@ant-design/icons'
 
 export function CreateDoctor() {
   const [doctor, setDoctors] = useState<DoctorsProps[]>([])

@@ -32,7 +32,7 @@ export const Container3 = styled.div`
 
   table {
     width: 100%;
-    height: 50%;
+    height: 50vh;
     border-collapse: collapse;
     border: 1px solid #ccc;
     word-break: break-all;
@@ -49,4 +49,14 @@ export const Container3 = styled.div`
       font-weight: 500;
     }
   }
+`
+
+export const StyleButtonEdit = styled.button`
+  text-decoration: none;
+  color: ${(props) => props.theme.colors.sbcolor};
+  background-color: red;
+  font-weight: 500;
+  border-radius: 4px;
+  margin-top: 24px;
+  padding: 8px;
 `

@@ -39,6 +39,8 @@ export const StyledLink = styled(Link)`
   font-weight: 500;
   border-radius: 4px;
   margin-top: 12px;
+  word-break: break-all;
+  overflow: hidden;
 `
 
 export const StyledLink2 = styled(Link)`

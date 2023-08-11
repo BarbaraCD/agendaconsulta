@@ -29,6 +29,7 @@ export const ApFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  word-break: break-all;
   margin-bottom: 8px;
 `
 
@@ -39,6 +40,7 @@ export const StyledLink = styled(Link)`
   font-weight: 500;
   border-radius: 4px;
   margin-top: 12px;
+  word-break: break-all;
 `
 
 export const StyledLink2 = styled(Link)`

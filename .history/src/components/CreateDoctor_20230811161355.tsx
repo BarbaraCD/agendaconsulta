@@ -10,8 +10,10 @@ import { InputDoctors } from './InputDoctors'
 import { SubmitButton } from './SubmitButton'
 import { Container, Container2, Container3 } from '../styles/CreateContainer'
 import { DoctorsTypes } from '../model/doctors'
+import { CloseOutlined } from '@ant-design/icons'
 
 export function CreateDoctor() {
+  const [editing, setEditing] = useState<boolean>(false)
   const [doctor, setDoctors] = useState<DoctorsProps[]>([])
   const [newDoctor, setNewDoctor] = useState<DoctorsProps>({
     id: 0,
@@ -50,6 +52,7 @@ export function CreateDoctor() {
             newDoctor.specialization,
           )
         } else {
+          setEditing(true)
           await updateDoctor(newDoctor.id, {
             name: newDoctor.name,
             crm: newDoctor.crm,

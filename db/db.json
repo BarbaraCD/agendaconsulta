@@ -50,38 +50,7 @@
       "id": 7
     }
   ],
-  "doctor": [
-    {
-      "name": "BARBARA CASTRO DINIZ",
-      "crm": 59852,
-      "specialization": "gastroenterologista",
-      "id": 1
-    },
-    {
-      "name": "LUIZ CARVALHO FERREIRA",
-      "crm": 89652,
-      "specialization": "PSIQUIATRA",
-      "id": 2
-    },
-    {
-      "name": "KENDALL ROY",
-      "crm": 89465,
-      "specialization": "DERMATOLOGISTA",
-      "id": 3
-    },
-    {
-      "name": "Harry Styles",
-      "crm": 89456,
-      "specialization": "Pediatra",
-      "id": 4
-    },
-    {
-      "name": "Sabrina Carpenter",
-      "crm": 45687,
-      "specialization": "Neurologista",
-      "id": 5
-    }
-  ],
+  "doctor": [],
   "appointment": [
     {
       "doctorID": 2,

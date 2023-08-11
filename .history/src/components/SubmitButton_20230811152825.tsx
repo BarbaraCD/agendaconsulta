@@ -13,7 +13,7 @@ const StyledButton = styled.button`
   border: none;
   background-color: ${(props) => props.theme.colors.primary};
   cursor: pointer;
-  overflow: hidden;
+  overflow: visible;
 
   &:hover {
     color: ${(props) => props.theme.colors[100]};
@@ -22,7 +22,7 @@ const StyledButton = styled.button`
   p {
     font-size: ${(props) => props.theme.size.xxl};
     font-weight: 700;
-    overflow: hidden;
+    overflow: visible;
   }
 `
 

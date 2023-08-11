@@ -19,7 +19,7 @@ const StyleLink = styled(Link)`
 export function Header() {
   return (
     <Container>
-      <StyleLink to="/">Agenda consulta</StyleLink>
+      <Link to="/">Agenda consulta</Link>
     </Container>
   )
 }

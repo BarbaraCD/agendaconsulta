@@ -5,7 +5,6 @@ export const InputContainer = styled.div`
   color: ${(props) => props.theme.colors.black};
   font-size: ${(props) => props.theme.size.md};
   padding: 10px 0;
-  flex: 1;
 
   h3 {
     background-color: ${(props) => props.theme.colors[100]};
@@ -19,6 +18,7 @@ export const InputContainer = styled.div`
   }
 
   p {
+    flex: 1;
     font-size: ${(props) => props.theme.size.lg};
     font-weight: 400;
   }

@@ -4,22 +4,24 @@ import { styled } from 'styled-components'
 const Container = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
   padding: 12px 16px;
-  flex: 1;
-  min-width: 80px;
-  color: ${(props) => props.theme.colors.white};
+  min-width: 80vw;
   font-weight: 700;
 `
 
-const StyleLink = styled(Link)`
+const StyleRoute = styled(Link)`
   text-decoration: none;
+  font-size: ${(props) => props.theme.size.xxl};
   color: ${(props) => props.theme.colors.white};
+  padding-left: 10px;
+  align-items: center;
+  justify-content: center;
   word-break: normal;
 `
 
 export function Header() {
   return (
     <Container>
-      <StyleLink to="/">Agenda consulta</StyleLink>
+      <StyleRoute to="/">Agenda consulta</StyleRoute>
     </Container>
   )
 }

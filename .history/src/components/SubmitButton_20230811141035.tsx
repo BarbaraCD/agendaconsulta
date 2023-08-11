@@ -13,6 +13,7 @@ const StyledButton = styled.button`
   border: none;
   background-color: ${(props) => props.theme.colors.primary};
   cursor: pointer;
+
   overflow: hidden;
 
   &:hover {

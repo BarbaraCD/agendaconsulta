@@ -10,11 +10,10 @@ export const StyledSidebar = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   overflow: auto;
-  height: 170vh;
+  height: 100%; /* Ocupa toda a altura disponível */
 
   @media (max-width: 768px) {
-    width: 100%;
-    height: 650vh;
+    width: 100%; /* Ocupa toda a largura disponível em telas menores */
   }
 `
 

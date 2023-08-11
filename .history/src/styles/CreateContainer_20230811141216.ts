@@ -32,7 +32,7 @@ export const Container3 = styled.div`
 
   table {
     width: 100%;
-    height: 50vh;
+    height: auto;
     border-collapse: collapse;
     border: 1px solid #ccc;
     word-break: break-all;

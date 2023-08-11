@@ -1,26 +1,20 @@
 import styled from 'styled-components'
 
 export const StyledSidebar = styled.div`
-  display: flex;
   flex-direction: column;
   background-color: ${(props) => props.theme.colors.sbcolor};
   color: ${(props) => props.theme.colors.black};
   font-size: ${(props) => props.theme.size.lg};
   font-weight: 500;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: start;
+  text-align: start;
   overflow: auto;
-  height: 170vh;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 650vh;
-  }
 `
 
 export const StyledList = styled.ul`
-  list-style: none;
+  flex-direction: column;
   padding: 12px;
+  list-style: none;
 
   li {
     cursor: pointer;

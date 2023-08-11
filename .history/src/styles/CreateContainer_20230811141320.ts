@@ -36,7 +36,7 @@ export const Container3 = styled.div`
     border-collapse: collapse;
     border: 1px solid #ccc;
     word-break: break-all;
-    overflow: hidden;
+    overflow: scroll;
 
     th,
     thead {

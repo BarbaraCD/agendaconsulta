@@ -1,4 +1,8 @@
-import { StyleList, StyledEditIcon } from '../styles/StyleList'
+import {
+  StyleList,
+  StyledDeleteIcon,
+  StyledEditIcon,
+} from '../styles/StyleList'
 
 export type PatientsProps = {
   id: number
@@ -25,6 +29,7 @@ export function Patients(props: PatientsProps) {
       <td>
         <span>{props.email}</span>
       </td>
+
       <td>
         <span>
           <StyledEditIcon onClick={props.handleEdit} />

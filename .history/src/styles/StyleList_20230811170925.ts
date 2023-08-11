@@ -1,4 +1,4 @@
-import { EditOutlined } from '@ant-design/icons'
+import { DeleteOutlined, EditOutlined } from '@ant-design/icons'
 import { styled } from 'styled-components'
 
 export const StyleList = styled.tr`

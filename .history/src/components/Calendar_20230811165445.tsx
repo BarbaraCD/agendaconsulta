@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { useEffect, useState } from 'react'
 import moment from 'moment'
 import { Calendar, momentLocalizer } from 'react-big-calendar'
@@ -119,7 +118,7 @@ export const AppointmentsCalendar = () => {
       </ApFooter>
 
       <StyledModal
-        title={<h3>`Detalhes da Consulta`</h3>}
+        title={<h3>"Detalhes da Consulta"</h3>}
         open={modalVisible}
         onCancel={closeModal}
         footer={null}

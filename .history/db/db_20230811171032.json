@@ -1,0 +1,55 @@
+{
+  "patient": [
+    {
+      "name": "Olivia Rodrigo",
+      "age": 20,
+      "telephone": 64984632514,
+      "email": "olivia@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Joshua Basset",
+      "age": 23,
+      "telephone": 64999868583,
+      "email": "joshua@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Joshua Basset",
+      "age": 23,
+      "telephone": 64999868583,
+      "email": "joshua@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Joshua Basset",
+      "age": 23,
+      "telephone": 64999868583,
+      "email": "joshua@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "Joshua Basset",
+      "age": 23,
+      "telephone": 64999868583,
+      "email": "joshua@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "Joshua Basset",
+      "age": 23,
+      "telephone": 64999868583,
+      "email": "joshua@gmail.com",
+      "id": 6
+    }
+  ],
+  "doctor": [
+    {
+      "name": "Doctor House",
+      "crm": 57451,
+      "specialization": "Infectologista",
+      "id": 2
+    }
+  ],
+  "appointment": []
+}

@@ -45,51 +45,11 @@
   ],
   "doctor": [
     {
-      "name": "Doctor Ray",
-      "crm": 57451,
-      "specialization": "Cirurgião Plástico",
-      "id": 1
-    },
-    {
       "name": "Doctor House",
-      "crm": 36589,
+      "crm": 57451,
       "specialization": "Infectologista",
       "id": 2
-    },
-    {
-      "name": "Taylor Swift",
-      "crm": 23654,
-      "specialization": "Neurologista",
-      "id": 3
-    },
-    {
-      "name": "Meredith Grey",
-      "crm": 89654,
-      "specialization": "Cardiologista",
-      "id": 4
     }
   ],
-  "appointment": [
-    {
-      "doctorID": 2,
-      "patientID": 2,
-      "date": "2023-08-16T19:00:00.000Z",
-      "symptoms": "dfkjgnbfmng dfgbijndfjk fkgjbndf",
-      "id": 1
-    },
-    {
-      "doctorID": 3,
-      "patientID": 1,
-      "date": "2023-08-21T20:00:00.000Z",
-      "symptoms": "corna",
-      "id": 2
-    },
-    {
-      "doctorID": 4,
-      "patientID": 3,
-      "date": "2023-08-24T17:00:00.000Z",
-      "symptoms": "sfdgb etyhnedty n rdghjety",
-      "id": 3
-    }
-  ]
+  "appointment": []
 }

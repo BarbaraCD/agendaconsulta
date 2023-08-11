@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { useEffect, useState } from 'react'
 import moment from 'moment'
 import { Calendar, momentLocalizer } from 'react-big-calendar'
@@ -7,6 +6,7 @@ import {
   deleteAppointment,
   getAppointment,
 } from '../services/appointment.services'
+
 import {
   CalendarStyled,
   ApFooter,
@@ -37,11 +37,7 @@ export const AppointmentsCalendar = () => {
   const [appointments, setAppointments] = useState<AppointmentsProps[]>([])
   const [selectedAppointment, setSelectedAppointment] =
     useState<SelectedAppointmentType | null>(null)
-  const [selectedAppointmentId, setSelectedAppointmentId] = useState<
-    number | null
-  >(null)
   const [modalVisible, setModalVisible] = useState(false)
-  const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false)
 
   useEffect(() => {
     fetchAppointments().catch((error) => {
@@ -86,21 +82,10 @@ export const AppointmentsCalendar = () => {
     setSelectedAppointment(null)
   }
 
-  const handleDeleteAppointment = (id: number) => {
-    setSelectedAppointmentId(id)
-    setShowDeleteConfirmation(true)
-  }
-
-  const confirmDelete = async (id: number) => {
+  const handleDeleteAppointment = async (id: number) => {
     await deleteAppointment(id)
     await fetchAppointments()
     closeModal()
-    setShowDeleteConfirmation(false)
-  }
-
-  const cancelDelete = () => {
-    setSelectedAppointmentId(null)
-    setShowDeleteConfirmation(false)
   }
 
   return (
@@ -145,16 +130,6 @@ export const AppointmentsCalendar = () => {
                 <DeleteOutlined />
               </button>
             </div>
-          </div>
-        )}
-
-        {showDeleteConfirmation && (
-          <div>
-            <p>Tem certeza que deseja excluir?</p>
-            <button onClick={() => confirmDelete(selectedAppointmentId!)}>
-              Sim
-            </button>
-            <button onClick={() => cancelDelete()}>Não</button>
           </div>
         )}
       </StyledModal>

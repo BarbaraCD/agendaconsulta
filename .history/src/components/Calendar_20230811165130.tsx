@@ -12,6 +12,7 @@ import {
   ApFooter,
   StyledLink,
   StyledModal,
+  StyledQuestion,
 } from '../styles/Appointments'
 import { AppointmentsProps } from './Appointments'
 import { getDoctorById } from '../services/doctor.services'
@@ -115,11 +116,11 @@ export const AppointmentsCalendar = () => {
         onSelectEvent={handleSelectEvent}
       />
       <ApFooter>
-        <StyledLink to="/appointments">Marcar Consulta/Voltar</StyledLink>
+        <StyledLink to="/appointments/new">Marcar Consulta/Voltar</StyledLink>
       </ApFooter>
 
       <StyledModal
-        title={<h3>`Detalhes da Consulta`</h3>}
+        title={<h3>Detalhes da Consulta</h3>}
         open={modalVisible}
         onCancel={closeModal}
         footer={null}
@@ -149,13 +150,13 @@ export const AppointmentsCalendar = () => {
         )}
 
         {showDeleteConfirmation && (
-          <div>
+          <StyledQuestion>
             <p>Tem certeza que deseja excluir?</p>
             <button onClick={() => confirmDelete(selectedAppointmentId!)}>
               Sim
             </button>
             <button onClick={() => cancelDelete()}>Não</button>
-          </div>
+          </StyledQuestion>
         )}
       </StyledModal>
     </CalendarStyled>

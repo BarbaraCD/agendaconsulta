@@ -1,4 +1,8 @@
-import { StyleList, StyledEditIcon } from '../styles/StyleList'
+import {
+  StyleList,
+  StyledDeleteIcon,
+  StyledEditIcon,
+} from '../styles/StyleList'
 
 export type DoctorsProps = {
   id: number

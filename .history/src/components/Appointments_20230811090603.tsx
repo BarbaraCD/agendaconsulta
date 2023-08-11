@@ -110,16 +110,9 @@ export const CreateAppointments: React.FC = () => {
       };
       if(!id){
         await createAppointment(newAppointment)
-        alert('Consulta agendada com sucesso')
-
       } else {
         await updateAppointment(id, newAppointment) 
       }
-      await fetchInfos()
-      setSelectedDoctor(undefined);
-      setSelectedPatient(undefined);
-      setSelectedDate(new Date());
-      setSymptoms('');
     }catch (error) {
       console.error('Erro ao agendar ou atualizar consulta:', error);
     }

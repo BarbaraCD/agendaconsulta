@@ -55,6 +55,7 @@ export function CreateDoctor(){
               specialization: newDoctor.specialization,
               id: 0
             });
+            
           }
           await fetchDoctor();
           setNewDoctor({
@@ -98,7 +99,6 @@ export function CreateDoctor(){
         />
 
           <SubmitButton onClick={createNewDoctor}/>
-          {editing && <StyledLink2 to="/"><CloseOutlined />Cancelar</StyledLink2>}
       </Container2>
       <Container3>
         <h3>Medicos já cadastrados</h3>
@@ -130,6 +130,7 @@ export function CreateDoctor(){
           </tbody>
         </table>
       </Container3>
+      {editing && <StyledLink2 to="/appointments/calendar"><CloseOutlined />Cancelar</StyledLink2>}
     </Container>
   )
 }

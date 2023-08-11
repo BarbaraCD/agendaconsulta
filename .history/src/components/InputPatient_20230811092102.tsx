@@ -25,6 +25,7 @@ export function InputPatients(props: InputPatientsProps) {
     const value = event.target.value;
     const numericValue = value.replace(/\D/g, '');
     const limitedValue = numericValue.slice(0, 2);
+    setAge(limitedValue === '' ? '' : Number(limitedValue));
     props.onAgeChange(Number(limitedValue));
   }
 

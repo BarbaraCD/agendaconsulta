@@ -12,7 +12,6 @@ import { PatientsProps } from './Patients'
 import { SubmitButton } from './SubmitButton'
 import { APBody, ApFooter, StyledAppointments, StyledDatepicker, StyledLink, StyledLink2 } from "../styles/Appointments"
 import { useParams } from 'react-router-dom'
-import { CloseOutlined } from '@ant-design/icons'
 
 export type AppointmentsProps = {
   doctorID: number
@@ -110,16 +109,9 @@ export const CreateAppointments: React.FC = () => {
       };
       if(!id){
         await createAppointment(newAppointment)
-        alert('Consulta agendada com sucesso')
-
       } else {
         await updateAppointment(id, newAppointment) 
       }
-      await fetchInfos()
-      setSelectedDoctor(undefined);
-      setSelectedPatient(undefined);
-      setSelectedDate(new Date());
-      setSymptoms('');
     }catch (error) {
       console.error('Erro ao agendar ou atualizar consulta:', error);
     }
@@ -158,10 +150,13 @@ export const CreateAppointments: React.FC = () => {
       </APBody>
 
       <ApFooter>
-        <SubmitButton onClick={handleScheduleAppointment} /> 
+        <SubmitButton onClick={handleScheduleAppointment} />
+        
         <StyledLink to="/appointments/calendar">Horarios disponíveis</StyledLink>
+
+        
       </ApFooter>
-      {editing && <StyledLink2 to="/appointments/calendar"><CloseOutlined />Cancelar</StyledLink2>}
+      {editing && <StyledLink2 to="/appointments/calendar">Cancelar</StyledLink2>}
     </StyledAppointments>
   )
 }

@@ -30,8 +30,7 @@ export const ApFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  word-break: break-all;
-  margin-bottom: 8px;
+  word-break: break-all
 `
 
 export const StyledLink = styled(Link)`
@@ -50,8 +49,9 @@ export const StyledLink2 = styled(Link)`
   background-color: red;
   font-weight: 500;
   border-radius: 4px;
-  margin-top: 24px;
-  padding: 8px; 
+  margin-top: 8px;
+  padding: 8px;
+  word-break: break-all;
 `
 
 export const CalendarStyled = styled.div`

@@ -30,8 +30,7 @@ export const ApFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  word-break: break-all;
-  margin-bottom: 8px;
+  word-break: break-all
 `
 
 export const StyledLink = styled(Link)`
@@ -46,12 +45,12 @@ export const StyledLink = styled(Link)`
 
 export const StyledLink2 = styled(Link)`
   text-decoration: none;
-  color: ${(props) => props.theme.colors.sbcolor};
-  background-color: red;
+  color: red;
+  background-color: lightred;
   font-weight: 500;
   border-radius: 4px;
-  margin-top: 24px;
-  padding: 8px; 
+  margin-top: 12px;
+  word-break: break-all;
 `
 
 export const CalendarStyled = styled.div`

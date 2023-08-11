@@ -45,13 +45,16 @@ export const StyledLink = styled(Link)`
 `
 
 export const StyledLink2 = styled(Link)`
+  width: 20%;
   text-decoration: none;
   color: ${(props) => props.theme.colors.sbcolor};
   background-color: red;
   font-weight: 500;
   border-radius: 4px;
   margin-top: 24px;
-  padding: 8px; 
+  padding: 8px;
+  word-break: break-all;
+  
 `
 
 export const CalendarStyled = styled.div`

@@ -123,15 +123,14 @@ export const AppointmentsCalendar = () => {
             </div>
           </div>
         )}
-
-        {showDeleteConfirmation && (
+      </StyledModal>
+      {showDeleteConfirmation && (
           <div>
             <p>Tem certeza que deseja excluir?</p>
             <button onClick={() => confirmDelete(selectedAppointmentId!)}>Sim</button>
             <button onClick={() => cancelDelete()}>Não</button>
           </div>
         )}
-      </StyledModal>
     </CalendarStyled>
   );
 };

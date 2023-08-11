@@ -101,7 +101,7 @@ export const AppointmentsCalendar = () => {
         onSelectEvent={handleSelectEvent}
       />
       <ApFooter>
-        <StyledLink to="/appointments/new">Marcar Consulta/Voltar</StyledLink>
+        <StyledLink to="/appointments">Marcar Consulta/Voltar</StyledLink>
       </ApFooter>
 
       <StyledModal title={<h3>"Detalhes da Consulta"</h3>} open={modalVisible} onCancel={closeModal} footer={null}>

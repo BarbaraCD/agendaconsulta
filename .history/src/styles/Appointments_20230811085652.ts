@@ -7,6 +7,7 @@ export const StyledAppointments = styled.div`
   color: ${(props) => props.theme.colors.black};
   font-size: ${(props) => props.theme.size.md};
   padding: 20px 0;
+  gap: 20px;
   overflow: hidden;
   word-break: break-all;
 `
@@ -30,8 +31,7 @@ export const ApFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  word-break: break-all;
-  margin-bottom: 8px;
+  word-break: break-all
 `
 
 export const StyledLink = styled(Link)`
@@ -50,8 +50,9 @@ export const StyledLink2 = styled(Link)`
   background-color: red;
   font-weight: 500;
   border-radius: 4px;
-  margin-top: 24px;
-  padding: 8px; 
+  margin-top: 12px;
+  padding: 8px;
+  word-break: break-all;
 `
 
 export const CalendarStyled = styled.div`

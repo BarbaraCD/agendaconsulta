@@ -51,7 +51,11 @@ export const StyledLink2 = styled(Link)`
   font-weight: 500;
   border-radius: 4px;
   margin-top: 24px;
-  padding: 8px; 
+  padding: 8px;
+  word-break: break-all;
+  justify-content: left;
+  align-items: end;
+  text-align: left;
 `
 
 export const CalendarStyled = styled.div`

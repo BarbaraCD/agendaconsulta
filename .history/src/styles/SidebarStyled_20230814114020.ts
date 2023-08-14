@@ -10,11 +10,10 @@ export const StyledSidebar = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   overflow: auto;
-  height: 100vh;
+  height: 100%;
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 650vh;
   }
 `
 
@@ -31,7 +30,7 @@ export const StyledList = styled.ul`
   a {
     text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
-    margin: 8px;
+
     word-break: break-all;
   }
 `

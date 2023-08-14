@@ -12,11 +12,11 @@ export const StyleList = styled.tr`
     border-bottom: 1px solid #ccc;
     text-align: center;
     width: 25%;
-    word-break: break-all;
 
     span {
       font-size: ${(props) => props.theme.size.md};
       font-weight: 400;
+      word-break: break-all;
     }
   }
 `

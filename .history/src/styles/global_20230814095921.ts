@@ -10,6 +10,7 @@ export default createGlobalStyle`
   body{
     height: 100%;
     width: 100%;
+    min-width: auto;
     font-family: 'Poppins', sans-serif;
     background: ${(props) => props.theme.colors.white};
     font-size: ${(props) => props.theme.size.xl};

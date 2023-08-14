@@ -1,15 +1,14 @@
 import { Link } from 'react-router-dom'
 import { styled } from 'styled-components'
 
-const ContainerHeader = styled.div`
+const Container = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
   padding: 12px 16px;
   flex: 1;
   width: 100%;
+  min-width: 80%;
   color: ${(props) => props.theme.colors.white};
   font-weight: 700;
-
-  min-width: 980%;
 `
 
 const StyleLink = styled(Link)`
@@ -20,8 +19,8 @@ const StyleLink = styled(Link)`
 
 export function Header() {
   return (
-    <ContainerHeader>
+    <Container>
       <StyleLink to="/">Agenda consulta</StyleLink>
-    </ContainerHeader>
+    </Container>
   )
 }

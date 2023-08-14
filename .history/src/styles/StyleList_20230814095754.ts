@@ -6,13 +6,14 @@ export const StyleList = styled.tr`
   border-radius: 4px;
   font-size: ${(props) => props.theme.size.md};
   overflow: scroll;
+  word-wrap: break-word;
+  word-break: break-all;
 
   td {
     padding: 8px;
     border-bottom: 1px solid #ccc;
     text-align: center;
     width: 25%;
-    word-break: break-all;
 
     span {
       font-size: ${(props) => props.theme.size.md};

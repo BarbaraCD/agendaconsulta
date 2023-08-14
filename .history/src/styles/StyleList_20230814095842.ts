@@ -17,6 +17,7 @@ export const StyleList = styled.tr`
     span {
       font-size: ${(props) => props.theme.size.md};
       font-weight: 400;
+      word-break: break-all;
     }
   }
 `

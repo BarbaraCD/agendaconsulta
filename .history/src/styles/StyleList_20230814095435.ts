@@ -3,6 +3,8 @@ import { styled } from 'styled-components'
 
 export const StyleList = styled.tr`
   border: 1px solid #ccc;
+  width: 90%;
+  min-width: 980px;
   border-radius: 4px;
   font-size: ${(props) => props.theme.size.md};
   overflow: scroll;
@@ -12,7 +14,6 @@ export const StyleList = styled.tr`
     border-bottom: 1px solid #ccc;
     text-align: center;
     width: 25%;
-    word-break: break-all;
 
     span {
       font-size: ${(props) => props.theme.size.md};

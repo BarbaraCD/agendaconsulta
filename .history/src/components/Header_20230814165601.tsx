@@ -9,7 +9,9 @@ const ContainerHeader = styled.div`
   color: ${(props) => props.theme.colors.white};
   font-weight: 700;
 
-  min-width: 980%;
+  @media (max-width: 250px) {
+    min-width: 60%;
+  }
 `
 
 const StyleLink = styled(Link)`

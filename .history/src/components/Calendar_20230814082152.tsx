@@ -21,6 +21,7 @@ import {
   CloseSquareOutlined,
   DeleteOutlined,
   EditOutlined,
+  ExclamationCircleOutlined,
 } from '@ant-design/icons'
 import { PatientsTypes } from '../model/patients'
 import { DoctorsTypes } from '../model/doctors'

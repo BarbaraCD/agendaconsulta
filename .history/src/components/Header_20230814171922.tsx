@@ -8,8 +8,9 @@ const ContainerHeader = styled.div`
   width: 100%;
   color: ${(props) => props.theme.colors.white};
   font-weight: 700;
+  word-break: keep-all;
 
-  @media (max-width: 100px) {
+  @media (max-width: 65px) {
     min-width: 980px;
   }
 `

@@ -8,8 +8,9 @@ const ContainerHeader = styled.div`
   width: 100%;
   color: ${(props) => props.theme.colors.white};
   font-weight: 700;
+  word-break: keep-all;
 
-  @media (max-width: 100px) {
+  @media (max-width: 65px) {
     min-width: 980px;
   }
 `
@@ -17,6 +18,7 @@ const ContainerHeader = styled.div`
 const StyleLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.white};
+  word-break: keep-all;
 `
 
 export function Header() {

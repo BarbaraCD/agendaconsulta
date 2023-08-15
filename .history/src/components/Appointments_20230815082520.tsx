@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
 
 import 'react-datepicker/dist/react-datepicker.css'
@@ -49,7 +48,7 @@ export const CreateAppointments: React.FC = () => {
     fetchInfos().catch((error) => {
       console.error('Error fetching Patients:', error)
     })
-  }, [])
+  })
 
   async function fetchInfos() {
     try {
@@ -131,7 +130,6 @@ export const CreateAppointments: React.FC = () => {
       } else {
         await updateAppointment(id, newAppointment)
       }
-      await fetchInfos()
       setSelectedDoctor(undefined)
       setSelectedPatient(undefined)
       setSelectedDate(new Date())

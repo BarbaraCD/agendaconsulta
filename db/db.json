@@ -41,6 +41,13 @@
       "telephone": 64995874563,
       "email": "klaus@gmail.com",
       "id": 6
+    },
+    {
+      "name": "Jeremy Gilbert",
+      "age": 17,
+      "telephone": 64845632145,
+      "email": "jeremygilbert@gmail.com",
+      "id": 7
     }
   ],
   "doctor": [
@@ -67,6 +74,12 @@
       "crm": 89654,
       "specialization": "Cardiologista",
       "id": 4
+    },
+    {
+      "name": "Katherine Petrova",
+      "crm": 54698,
+      "specialization": "Psiquiatra",
+      "id": 5
     }
   ],
   "appointment": [
@@ -90,6 +103,27 @@
       "date": "2023-08-24T17:00:00.000Z",
       "symptoms": "sfdgb etyhnedty n rdghjety",
       "id": 3
+    },
+    {
+      "doctorID": 3,
+      "patientID": 3,
+      "date": "2023-08-24T16:00:00.000Z",
+      "symptoms": "adrvfadrf aedrgrhrty",
+      "id": 4
+    },
+    {
+      "doctorID": 1,
+      "patientID": 1,
+      "date": "2023-08-30T12:00:00.000Z",
+      "symptoms": "okjmuhi ygvbyuhbn",
+      "id": 5
+    },
+    {
+      "doctorID": 1,
+      "patientID": 2,
+      "date": "2023-08-29T13:00:00.000Z",
+      "symptoms": "dtujryk ketyun wrthw wryhjstr",
+      "id": 6
     }
   ]
 }

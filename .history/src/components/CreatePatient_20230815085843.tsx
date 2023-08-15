@@ -62,7 +62,6 @@ export function CreatePatient() {
             email: newPatient.email,
             id: 0,
           })
-          alert('Atualização realizada')
         }
         await fetchPatient()
         setNewPatient({

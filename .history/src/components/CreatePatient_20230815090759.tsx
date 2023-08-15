@@ -53,7 +53,7 @@ export function CreatePatient() {
             newPatient.telephone,
             newPatient.email,
           )
-          alert('Paciente cadastrado com sucesso!')
+          alert('Paciente cadastrado com sucesso')
         } else {
           await updatePatient(newPatient.id, {
             name: newPatient.name,
@@ -62,7 +62,7 @@ export function CreatePatient() {
             email: newPatient.email,
             id: 0,
           })
-          alert('Atualização realizada!')
+          alert('Atualização realizada')
         }
         await fetchPatient()
         setNewPatient({

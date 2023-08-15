@@ -48,13 +48,6 @@
       "telephone": 64845632145,
       "email": "jeremygilbert@gmail.com",
       "id": 7
-    },
-    {
-      "name": "Bonnie Bennet",
-      "age": 18,
-      "telephone": 64992363654,
-      "email": "bonnie@gmail.com",
-      "id": 8
     }
   ],
   "doctor": [
@@ -131,13 +124,6 @@
       "date": "2023-08-29T13:00:00.000Z",
       "symptoms": "dtujryk ketyun wrthw wryhjstr",
       "id": 6
-    },
-    {
-      "doctorID": 5,
-      "patientID": 7,
-      "date": "2023-08-31T12:00:00.000Z",
-      "symptoms": "fsgbsfgb sfgbsfghf",
-      "id": 7
     }
   ]
 }

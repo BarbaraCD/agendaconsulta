@@ -127,10 +127,9 @@ export const CreateAppointments: React.FC = () => {
       }
       if (!id) {
         await createAppointment(newAppointment)
-        alert('Consulta agendada com sucesso!')
+        alert('Consulta agendada com sucesso')
       } else {
         await updateAppointment(id, newAppointment)
-        alert('Atualização realizada!')
       }
       // await fetchInfos()
       setSelectedDoctor(undefined)

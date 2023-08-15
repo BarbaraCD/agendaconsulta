@@ -94,7 +94,7 @@ export function CreateDoctor() {
           specialization={newDoctor.specialization}
           id={newDoctor.id}
         />
-        {/* <SubmitButton onClick={createNewDoctor} /> */}
+        <SubmitButton onClick={createNewDoctor} />
       </Container2>
       <Container3>
         <h3>Medicos já cadastrados</h3>

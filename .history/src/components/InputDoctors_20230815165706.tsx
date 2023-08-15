@@ -40,7 +40,6 @@ type CreateDocFormData = z.infer<typeof createDocFormSchema>
 
 export function InputDoctors() {
   const [output, setOutput] = useState('')
-
   const {
     register,
     handleSubmit,
@@ -73,9 +72,7 @@ export function InputDoctors() {
             <span>{errors.specialization.message}</span>
           )}
         </div>
-        <SubmitButton type="submit">
-          <p>Salvar</p>
-        </SubmitButton>
+        <SubmitButton type="submit">Salvar</SubmitButton>
       </form>
       <pre>{output}</pre>
     </InputContainer>

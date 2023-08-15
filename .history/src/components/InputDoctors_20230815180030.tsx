@@ -45,6 +45,7 @@ export function InputDoctors() {
     register,
     handleSubmit,
     formState: { errors },
+    control,
   } = useForm<CreateDocFormData>({
     resolver: zodResolver(createDocFormSchema),
   })

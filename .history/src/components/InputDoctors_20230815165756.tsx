@@ -40,7 +40,6 @@ type CreateDocFormData = z.infer<typeof createDocFormSchema>
 
 export function InputDoctors() {
   const [output, setOutput] = useState('')
-
   const {
     register,
     handleSubmit,

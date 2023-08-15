@@ -2,11 +2,7 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
-import {
-  InputContainer,
-  StyledInput,
-  SubmitButton,
-} from '../styles/InputContainer'
+import { InputContainer, StyledInput } from '../styles/InputContainer'
 
 const createDocFormSchema = z.object({
   name: z
@@ -40,7 +36,6 @@ type CreateDocFormData = z.infer<typeof createDocFormSchema>
 
 export function InputDoctors() {
   const [output, setOutput] = useState('')
-
   const {
     register,
     handleSubmit,
@@ -73,9 +68,7 @@ export function InputDoctors() {
             <span>{errors.specialization.message}</span>
           )}
         </div>
-        <SubmitButton type="submit">
-          <p>Salvar</p>
-        </SubmitButton>
+        <SubmitButton type="submit">Salvar</SubmitButton>
       </form>
       <pre>{output}</pre>
     </InputContainer>

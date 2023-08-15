@@ -7,7 +7,7 @@ export const InputContainer = styled.main`
   padding: 10px 0;
 
   div {
-    /* display: flex; */
+    display: flex;
     margin: 8px 8px 8px 0;
   }
 
@@ -19,7 +19,7 @@ export const InputContainer = styled.main`
 
   label {
     display: flex;
-    margin: 4px;
+    margin-right: 4px;
   }
 
   p {
@@ -54,7 +54,7 @@ export const SubmitButton = styled.button`
 `
 
 export const StyledInput = styled(Input)`
-  /* margin-left: 8px; */
+  margin-left: 8px;
   border: none;
   overflow: hidden;
 `

@@ -19,7 +19,7 @@ export const InputContainer = styled.main`
 
   label {
     display: flex;
-    margin: 4px;
+    margin: 6px 0;
   }
 
   p {

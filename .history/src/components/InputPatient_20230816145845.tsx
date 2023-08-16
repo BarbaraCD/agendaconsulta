@@ -1,6 +1,5 @@
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
-import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import {
   InputContainer,
@@ -33,8 +32,6 @@ const createPatFormSchema = z.object({
 type CreatePatFormData = z.infer<typeof createPatFormSchema>
 
 export function InputPatients() {
-  const [output, setOutput] = useState('')
-
   const {
     register,
     handleSubmit,
@@ -45,7 +42,7 @@ export function InputPatients() {
   })
 
   function createPatienttest(data: CreatePatFormData) {
-    setOutput(JSON.stringify(data))
+    console.log(JSON.stringify(data))
   }
 
   return (
@@ -96,7 +93,6 @@ export function InputPatients() {
           <p>Salvar</p>
         </SubmitButton>
       </form>
-      <pre>{output}</pre>
     </InputContainer>
   )
 }

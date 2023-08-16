@@ -21,9 +21,7 @@ const createDocFormSchema = z.object({
         })
         .join(' ')
     }),
-  crm: z.string().refine((value) => /^\d{5}$/.test(value), {
-    message: 'O CRM deve conter exatamente 5 dígitos numéricos',
-  }),
+  crm: z.number().min(5, 'O CRM é obrigatório'),
   specialization: z.string().nonempty('A especialização é obrigatória'),
 })
 
@@ -38,11 +36,10 @@ export function InputDoctors() {
     formState: { errors },
   } = useForm<CreateDocFormData>({
     resolver: zodResolver(createDocFormSchema),
-    defaultValues: { name: '', crm: '', specialization: '' },
   })
 
   function createDoctortest(data: CreateDocFormData) {
-    setOutput(JSON.stringify(data, null, 2))
+    setOutput(JSON.stringify(data))
   }
 
   return (

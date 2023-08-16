@@ -21,10 +21,19 @@ const createDocFormSchema = z.object({
         })
         .join(' ')
     }),
-  crm: z.string().refine((value) => /^\d{5}$/.test(value), {
-    message: 'O CRM deve conter exatamente 5 dígitos numéricos',
-  }),
-  specialization: z.string().nonempty('A especialização é obrigatória'),
+  crm: z.number().min(5, 'O CRM é obrigatório'),
+  specialization: z
+    .string()
+    .nonempty('A especialização é obrigatória')
+    .transform((specialization) => {
+      return specialization
+        .trim()
+        .split(' ')
+        .map((word) => {
+          return word[0].toLocaleUpperCase().concat(word.substring(1))
+        })
+        .join(' ')
+    }),
 })
 
 type CreateDocFormData = z.infer<typeof createDocFormSchema>
@@ -33,12 +42,11 @@ export function InputDoctors() {
   const [output, setOutput] = useState('')
 
   const {
-    register,
     handleSubmit,
+    register,
     formState: { errors },
   } = useForm<CreateDocFormData>({
     resolver: zodResolver(createDocFormSchema),
-    defaultValues: { name: '', crm: '', specialization: '' },
   })
 
   function createDoctortest(data: CreateDocFormData) {
@@ -57,18 +65,15 @@ export function InputDoctors() {
           />
           {errors.name && <span>{errors.name.message}</span>}
         </div>
-
         <div>
           <label htmlFor="crm">CRM:</label>
           <StyledInput
             {...register('crm')}
             type="number"
-            maxLength={5}
             placeholder="digite o numero do CRM"
           />
           {errors.crm && <span>{errors.crm.message}</span>}
         </div>
-
         <div>
           <label htmlFor="specialization">Especialização:</label>
           <StyledInput
@@ -80,7 +85,6 @@ export function InputDoctors() {
             <span>{errors.specialization.message}</span>
           )}
         </div>
-
         <SubmitButton type="submit">
           <p>Salvar</p>
         </SubmitButton>

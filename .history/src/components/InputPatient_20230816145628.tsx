@@ -50,7 +50,8 @@ export function InputPatients() {
 
   return (
     <InputContainer>
-      <form onSubmit={handleSubmit(createPatienttest)}>
+      <form onSubmit={handleSubmit(createPatienttest, (e) => {
+          console.log(e))}>
         <div>
           <label htmlFor="name">Nome:</label>
           <StyledInput

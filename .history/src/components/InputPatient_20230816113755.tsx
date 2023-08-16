@@ -41,7 +41,6 @@ export function InputPatients() {
     formState: { errors },
   } = useForm<CreatePatFormData>({
     resolver: zodResolver(createPatFormSchema),
-    defaultValues: { name: '', age: 0, telephone: 0, email: '' },
   })
 
   function createPatienttest(data: CreatePatFormData) {
@@ -62,29 +61,27 @@ export function InputPatients() {
         </div>
 
         <div>
-          <label htmlFor="age">Idade:</label>
+          <label htmlFor="name">Idade:</label>
           <StyledInput
             {...register('age')}
             type="number"
-            maxLength={3}
             placeholder="digite sua idade"
           />
           {errors.age && <span>{errors.age.message}</span>}
         </div>
 
         <div>
-          <label htmlFor="telephone">Telefone:</label>
+          <label htmlFor="name">Telefone:</label>
           <StyledInput
             {...register('telephone')}
             type="number"
-            maxLength={11}
             placeholder="digite o telefone para contato"
           />
           {errors.telephone && <span>{errors.telephone.message}</span>}
         </div>
 
         <div>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="name">Email:</label>
           <StyledInput
             {...register('email')}
             type="text"

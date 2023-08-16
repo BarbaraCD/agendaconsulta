@@ -45,7 +45,7 @@ export function InputPatients() {
   })
 
   function createPatienttest(data: CreatePatFormData) {
-    setOutput(JSON.stringify(data))
+    console.log(JSON.stringify(data))
   }
 
   return (

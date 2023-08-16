@@ -21,8 +21,8 @@ const createDocFormSchema = z.object({
         })
         .join(' ')
     }),
-  crm: z.string().refine((value) => /^\d{5}$/.test(value), {
-    message: 'O CRM deve conter exatamente 5 dígitos numéricos',
+  crm: z.string().refine((value) => value.length === 5, {
+    message: 'O CRM deve ter exatamente 5 dígitos',
   }),
   specialization: z.string().nonempty('A especialização é obrigatória'),
 })

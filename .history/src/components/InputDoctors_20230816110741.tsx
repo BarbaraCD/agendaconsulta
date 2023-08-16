@@ -1,6 +1,5 @@
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
-import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import {
   InputContainer,
@@ -21,16 +20,14 @@ const createDocFormSchema = z.object({
         })
         .join(' ')
     }),
-  crm: z.string().refine((value) => /^\d{5}$/.test(value), {
-    message: 'O CRM deve conter exatamente 5 dígitos numéricos',
-  }),
+  crm: z.number().min(5, 'O CRM é obrigatório'),
   specialization: z.string().nonempty('A especialização é obrigatória'),
 })
 
 type CreateDocFormData = z.infer<typeof createDocFormSchema>
 
 export function InputDoctors() {
-  const [output, setOutput] = useState('')
+  // const [output, setOutput] = useState('')
 
   const {
     register,
@@ -38,11 +35,10 @@ export function InputDoctors() {
     formState: { errors },
   } = useForm<CreateDocFormData>({
     resolver: zodResolver(createDocFormSchema),
-    defaultValues: { name: '', crm: '', specialization: '' },
   })
 
   function createDoctortest(data: CreateDocFormData) {
-    setOutput(JSON.stringify(data, null, 2))
+    console.log(JSON.stringify(data))
   }
 
   return (
@@ -51,7 +47,7 @@ export function InputDoctors() {
         <div>
           <label htmlFor="name">Nome:</label>
           <StyledInput
-            {...register('name')}
+            {...register('name', { required: true })}
             type="text"
             placeholder="digite seu nome"
           />
@@ -61,9 +57,8 @@ export function InputDoctors() {
         <div>
           <label htmlFor="crm">CRM:</label>
           <StyledInput
-            {...register('crm')}
+            {...register('crm', { required: true })}
             type="number"
-            maxLength={5}
             placeholder="digite o numero do CRM"
           />
           {errors.crm && <span>{errors.crm.message}</span>}
@@ -72,7 +67,7 @@ export function InputDoctors() {
         <div>
           <label htmlFor="specialization">Especialização:</label>
           <StyledInput
-            {...register('specialization')}
+            {...register('specialization', { required: true })}
             type="text"
             placeholder="digite a especialização medica"
           />
@@ -85,7 +80,7 @@ export function InputDoctors() {
           <p>Salvar</p>
         </SubmitButton>
       </form>
-      <pre>{output}</pre>
+      {/* <pre>{output}</pre> */}
     </InputContainer>
   )
 }

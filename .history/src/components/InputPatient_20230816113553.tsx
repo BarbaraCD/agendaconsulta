@@ -22,12 +22,11 @@ const createPatFormSchema = z.object({
         .join(' ')
     }),
   age: z.number().min(3, 'A idade é obrigatória'),
-  telephone: z.number().min(11, 'O numero de telefone é obrigatório'),
-  email: z
-    .string()
+  telephone: z.number().min(11, "O numero de telefone é obrigatório"),
+  email: z.string()
     .nonempty('O email é obrigatório')
     .email('Formato de email inválido')
-    .toLowerCase(),
+    .toLowerCase(),,
 })
 
 type CreatePatFormData = z.infer<typeof createPatFormSchema>
@@ -41,7 +40,6 @@ export function InputPatients() {
     formState: { errors },
   } = useForm<CreatePatFormData>({
     resolver: zodResolver(createPatFormSchema),
-    defaultValues: { name: '', age: 0, telephone: 0, email: '' },
   })
 
   function createPatienttest(data: CreatePatFormData) {
@@ -50,8 +48,8 @@ export function InputPatients() {
 
   return (
     <InputContainer>
-      <form onSubmit={handleSubmit(createPatienttest)}>
-        <div>
+      <form action="">
+      <div>
           <label htmlFor="name">Nome:</label>
           <StyledInput
             {...register('name')}
@@ -62,29 +60,27 @@ export function InputPatients() {
         </div>
 
         <div>
-          <label htmlFor="age">Idade:</label>
+          <label htmlFor="name">Idade:</label>
           <StyledInput
             {...register('age')}
             type="number"
-            maxLength={3}
             placeholder="digite sua idade"
           />
           {errors.age && <span>{errors.age.message}</span>}
         </div>
 
         <div>
-          <label htmlFor="telephone">Telefone:</label>
+          <label htmlFor="name">Telefone:</label>
           <StyledInput
             {...register('telephone')}
             type="number"
-            maxLength={11}
             placeholder="digite o telefone para contato"
           />
           {errors.telephone && <span>{errors.telephone.message}</span>}
         </div>
 
         <div>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="name">Email:</label>
           <StyledInput
             {...register('email')}
             type="text"
@@ -92,11 +88,7 @@ export function InputPatients() {
           />
           {errors.email && <span>{errors.email.message}</span>}
         </div>
-        <SubmitButton type="submit">
-          <p>Salvar</p>
-        </SubmitButton>
       </form>
-      <pre>{output}</pre>
     </InputContainer>
   )
 }

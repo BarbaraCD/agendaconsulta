@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { object, z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -10,7 +10,7 @@ import {
 
 const createDocFormSchema = z.object({
   name: z
-    .string()
+    .string({ description: 'o nome é obrigatorio' })
     .nonempty('O nome é obrigatório')
     .transform((name) => {
       return name
@@ -21,9 +21,7 @@ const createDocFormSchema = z.object({
         })
         .join(' ')
     }),
-  crm: z.string().refine((value) => /^\d{5}$/.test(value), {
-    message: 'O CRM deve conter exatamente 5 dígitos numéricos',
-  }),
+  crm: z.number().min(5, 'O CRM é obrigatório'),
   specialization: z.string().nonempty('A especialização é obrigatória'),
 })
 
@@ -38,16 +36,20 @@ export function InputDoctors() {
     formState: { errors },
   } = useForm<CreateDocFormData>({
     resolver: zodResolver(createDocFormSchema),
-    defaultValues: { name: '', crm: '', specialization: '' },
+    defaultValues: { name: '', crm: 0, specialization: '' },
   })
 
   function createDoctortest(data: CreateDocFormData) {
-    setOutput(JSON.stringify(data, null, 2))
+    setOutput(JSON.stringify(data))
   }
 
   return (
     <InputContainer>
-      <form onSubmit={handleSubmit(createDoctortest)}>
+      <form
+        onSubmit={handleSubmit(createDoctortest, (e) => {
+          console.log(e)
+        })}
+      >
         <div>
           <label htmlFor="name">Nome:</label>
           <StyledInput

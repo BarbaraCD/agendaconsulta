@@ -41,7 +41,6 @@ export function InputPatients() {
     formState: { errors },
   } = useForm<CreatePatFormData>({
     resolver: zodResolver(createPatFormSchema),
-    defaultValues: { name: '', age: 0, telephone: 0, email: '' },
   })
 
   function createPatienttest(data: CreatePatFormData) {

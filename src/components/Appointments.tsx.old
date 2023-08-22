@@ -25,7 +25,6 @@ import { useParams } from 'react-router-dom'
 import { CloseOutlined } from '@ant-design/icons'
 import { DoctorsProps } from './DoctorTable'
 import { PatientsProps } from './PatientTable'
-import { z } from 'zod'
 
 export type AppointmentsProps = {
   doctorID: number
@@ -34,13 +33,6 @@ export type AppointmentsProps = {
   symptoms: string
   id: number
 }
-
-const appointmentSchema = z.object({
-  doctorID: z.number(),
-  patientID: z.number(),
-  date: z.date(),
-  symptoms: z.string().nonempty('Necessário inserir os sintomas'),
-})
 
 export const CreateAppointments: React.FC = () => {
   const [editing, setEditing] = useState<boolean>(false)

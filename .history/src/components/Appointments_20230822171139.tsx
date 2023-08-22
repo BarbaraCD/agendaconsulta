@@ -38,7 +38,7 @@ export type AppointmentsProps = {
 const appointmentSchema = z.object({
   doctorID: z.number(),
   patientID: z.number(),
-  date: z.date(),
+  date: z.date().nonempty(),
   symptoms: z.string().nonempty('Necessário inserir os sintomas'),
 })
 

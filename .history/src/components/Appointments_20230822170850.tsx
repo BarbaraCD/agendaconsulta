@@ -39,7 +39,7 @@ const appointmentSchema = z.object({
   doctorID: z.number(),
   patientID: z.number(),
   date: z.date(),
-  symptoms: z.string().nonempty('Necessário inserir os sintomas'),
+  symptoms: z.string(),
 })
 
 export const CreateAppointments: React.FC = () => {

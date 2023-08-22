@@ -35,12 +35,7 @@ export type AppointmentsProps = {
   id: number
 }
 
-const appointmentSchema = z.object({
-  doctorID: z.number(),
-  patientID: z.number(),
-  date: z.date(),
-  symptoms: z.string().nonempty('Necessário inserir os sintomas'),
-})
+const appointmentSchema = z.object({})
 
 export const CreateAppointments: React.FC = () => {
   const [editing, setEditing] = useState<boolean>(false)

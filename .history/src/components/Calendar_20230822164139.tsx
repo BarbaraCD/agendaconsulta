@@ -14,7 +14,7 @@ import {
   StyledModal,
   StyledQuestion,
 } from '../styles/Appointments'
-import { AppointmentsProps } from './Appointments.tsx'
+import { AppointmentsProps } from './Appointments.tsx.old'
 import { getDoctorById } from '../services/doctor.services'
 import { getPatientById } from '../services/patient.services'
 import {

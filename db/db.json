@@ -9,7 +9,7 @@
     },
     {
       "name": "Barbara Diniz",
-      "age": 23,
+      "age": 26,
       "telephone": "64999829815",
       "email": "barbaracastrod7@gmail.com",
       "id": 2
@@ -37,17 +37,10 @@
     },
     {
       "name": "Damon Salvatore",
-      "age": 100,
+      "age": 120,
       "telephone": "64986956545",
       "email": "damon@gmail.com",
       "id": 6
-    },
-    {
-      "name": "Szrtgha",
-      "age": 34,
-      "telephone": "98989898989",
-      "email": "qeargqaerg@vygvn.srf",
-      "id": 7
     }
   ],
   "doctor": [
@@ -58,28 +51,16 @@
       "id": 1
     },
     {
-      "name": "Doctor House",
-      "crm": 36589,
-      "specialization": "Infectologista",
+      "name": "Meredith Grey",
+      "crm": "59853",
+      "specialization": "Gastroenterologista",
       "id": 2
     },
     {
       "name": "Taylor Swift",
-      "crm": 23654,
-      "specialization": "Neurologista",
-      "id": 3
-    },
-    {
-      "name": "Meredith Grey",
-      "crm": 89654,
+      "crm": "13131",
       "specialization": "Cardiologista",
-      "id": 4
-    },
-    {
-      "name": "Katherine Petrova",
-      "crm": 54698,
-      "specialization": "Psiquiatra",
-      "id": 5
+      "id": 3
     }
   ],
   "appointment": [
@@ -131,6 +112,13 @@
       "date": "2023-08-31T12:00:00.000Z",
       "symptoms": "fsgbsfgb sfgbsfghf",
       "id": 7
+    },
+    {
+      "doctorID": 2,
+      "patientID": 4,
+      "date": "2023-08-30T15:00:00.000Z",
+      "symptoms": "dfhnsfbnsfgnsf",
+      "id": 8
     }
   ]
 }

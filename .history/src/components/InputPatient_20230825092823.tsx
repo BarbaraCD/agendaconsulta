@@ -10,7 +10,6 @@ import {
   MessageError,
   MessageSaved,
   StyledInput,
-  StyledValidation,
   SubmitButton,
 } from '../styles/InputContainer'
 import {
@@ -90,11 +89,11 @@ export function InputPatients() {
     try {
       if (id) {
         await updatePatient(Number(id), data)
-        navigate(-1)
       } else {
         await createPatient(data)
       }
       setSuccessMessage('Paciente salvo com sucesso!')
+      navigate(-1)
     } catch (error) {
       setErrorMessage('Erro ao cadastrar/atualizar paciente.')
     }
@@ -114,9 +113,7 @@ export function InputPatients() {
             id="name"
             placeholder="nome do paciente"
           />
-          {errors.name && (
-            <StyledValidation>{errors.name.message}</StyledValidation>
-          )}
+          {errors.name && <span>{errors.name.message}</span>}
         </div>
 
         <div>
@@ -128,9 +125,7 @@ export function InputPatients() {
             maxLength={3}
             placeholder="idade do paciente"
           />
-          {errors.age && (
-            <StyledValidation>{errors.age.message}</StyledValidation>
-          )}
+          {errors.age && <span>{errors.age.message}</span>}
         </div>
 
         <div>
@@ -141,9 +136,7 @@ export function InputPatients() {
             id="telephone"
             placeholder="telefone para contato"
           />
-          {errors.telephone && (
-            <StyledValidation>{errors.telephone.message}</StyledValidation>
-          )}
+          {errors.telephone && <span>{errors.telephone.message}</span>}
         </div>
 
         <div>
@@ -154,9 +147,7 @@ export function InputPatients() {
             id="email"
             placeholder="email@example.com"
           />
-          {errors.email && (
-            <StyledValidation>{errors.email.message}</StyledValidation>
-          )}
+          {errors.email && <span>{errors.email.message}</span>}
         </div>
         <FlexDiv>
           <SubmitButton type="submit" disabled={isSubmitting}>
@@ -167,7 +158,7 @@ export function InputPatients() {
         </FlexDiv>
       </form>
       {editing && (
-        <StyledLink2 to="/patients/list">
+        <StyledLink2 to="/doctors/list">
           <CloseOutlined />
           Cancelar
         </StyledLink2>

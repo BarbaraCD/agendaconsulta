@@ -2,8 +2,8 @@
   "patient": [
     {
       "name": "Olivia Rodrigo",
-      "age": 20,
-      "telephone": 64984632514,
+      "age": 21,
+      "telephone": "64984632514",
       "email": "olivia@gmail.com",
       "id": 1
     },
@@ -61,6 +61,12 @@
       "crm": "13131",
       "specialization": "Cardiologista",
       "id": 3
+    },
+    {
+      "name": "Doctor House",
+      "crm": "98653",
+      "specialization": "Clinico Geral",
+      "id": 4
     }
   ],
   "appointment": [
@@ -68,15 +74,29 @@
       "doctorID": 2,
       "patientID": 4,
       "date": "2023-08-30T15:00:00.000Z",
-      "symptoms": "dfhnsfbnsfgnsf",
+      "symptoms": "adolescente",
       "id": 1
     },
     {
       "doctorID": 2,
       "patientID": 3,
       "date": "2023-08-31T19:00:00.000Z",
-      "symptoms": "infiel",
+      "symptoms": "CORNO",
       "id": 2
+    },
+    {
+      "doctorID": 1,
+      "patientID": 3,
+      "date": "2023-09-01T14:00:00.000Z",
+      "symptoms": "kkkkkkkk ggggggggg ttttttttttttt ddddddddddd",
+      "id": 3
+    },
+    {
+      "doctorID": 2,
+      "patientID": 1,
+      "date": "2023-09-04T12:00:00.000Z",
+      "symptoms": "corna",
+      "id": 4
     }
   ]
 }

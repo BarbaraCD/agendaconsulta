@@ -6,6 +6,7 @@ import { Select } from 'antd'
 
 import {
   createAppointment,
+  getAppointment,
   getAppointmentById,
   updateAppointment,
 } from '../services/appointment.services'
@@ -37,7 +38,7 @@ import { getPatient } from '../services/patient.services'
 export type AppointmentsProps = {
   doctorID: number
   patientID: number
-  date: string | Date
+  date: string
   symptoms: string
   id: number
 }
@@ -91,22 +92,19 @@ export const CreateAppointments: React.FC = () => {
     fetchInfos().catch((error) => {
       console.error('Error fetching Patients:', error)
     })
-  }, [])
+    console.log(id)
+  }, [id])
 
   async function fetchInfos() {
-    const responseDoc = await getDoctors()
-    const responsePat = await getPatient()
-    setDoctors(responseDoc)
-    setPatients(responsePat)
     if (!id) return
     try {
+      const responseDoc = await getDoctors()
+      const responsePat = await getPatient()
       const responseAp = await getAppointmentById(Number(id))
-      const responseDate = {
-        ...responseAp,
-      }
-      responseDate.date = new Date(responseDate.date)
-      reset(responseDate as unknown as AppointmentSchemaType)
-      setEditing(true)
+      setDoctors(responseDoc)
+      setPatients(responsePat)
+      reset(responseAp as unknown as AppointmentSchemaType)
+      console.log(responseAp)
     } catch (error) {
       console.error('Error fetching Infos:', error)
     }
@@ -129,11 +127,11 @@ export const CreateAppointments: React.FC = () => {
     try {
       if (id) {
         await updateAppointment(Number(id), data)
-        navigate(-1)
       } else {
         await createAppointment(data)
       }
       setSuccessMessage('Consulta agendada/atualizada com sucesso!')
+      navigate(-1)
     } catch (error) {
       setErrorMessage('Erro ao agendar/atualizar consulta.')
     }

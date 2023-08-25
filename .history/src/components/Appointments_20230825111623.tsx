@@ -79,7 +79,7 @@ export const CreateAppointments: React.FC = () => {
   const [editing, setEditing] = useState<boolean>(false)
   const [doctors, setDoctors] = useState<DoctorsProps[]>([])
   const [patients, setPatients] = useState<PatientsProps[]>([])
-  const [appointments, setAppointments] = useState<AppointmentsProps[]>([])
+  // const [appointments, setAppointments] = useState<AppointmentsProps[]>([])
 
   const [successMessage, setSuccessMessage] = useState<string | null>(null)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
@@ -117,7 +117,7 @@ export const CreateAppointments: React.FC = () => {
     return day !== 0 && day !== 6
   }
 
-  function isAppointmented(time: Date) {
+  function isAppointmented(appointments: AppointmentsProps[], time: Date) {
     const selectedDateISO = time.toISOString()
     const existingAppointment = appointments.find(
       (appointment) => appointment.date === selectedDateISO,
@@ -197,7 +197,10 @@ export const CreateAppointments: React.FC = () => {
                 minDate={new Date()}
                 selected={value}
                 dateFormat="dd/MM/yyyy HH:mm"
-                filterTime={(time) => !isAppointmented(time)}
+                filterTime={(time) => {
+                  const appointmentsData = fetchInfos()
+                  return !isAppointmented(appointmentsData, time)
+                }}
                 filterDate={(date) => isWeekday(date)}
               />
             )}

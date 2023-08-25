@@ -9,17 +9,15 @@ import {
   MessageError,
   MessageSaved,
   StyledInput,
-  StyledValidation,
   SubmitButton,
 } from '../styles/InputContainer'
-import { StyledLink, StyledLink2 } from '../styles/Appointments'
+import { StyledLink } from '../styles/Appointments'
 import {
   createDoctor,
   getDoctorById,
   updateDoctor,
 } from '../services/doctor.services'
 import { useParams, useNavigate } from 'react-router-dom'
-import { CloseOutlined } from '@ant-design/icons'
 
 const doctorSchema = z.object({
   name: z
@@ -90,11 +88,11 @@ export function InputDoctors() {
     try {
       if (id) {
         await updateDoctor(Number(id), data)
-        navigate(-1)
       } else {
         await createDoctor(data)
       }
       setSuccessMessage('Médico salvo com sucesso!')
+      navigate(-1)
     } catch (error) {
       setErrorMessage('Erro ao cadastrar/atualizar médico.')
     }
@@ -113,9 +111,7 @@ export function InputDoctors() {
             type="text"
             placeholder="nome do médico"
           />
-          {errors.name && (
-            <StyledValidation>{errors.name.message}</StyledValidation>
-          )}
+          {errors.name && <span>{errors.name.message}</span>}
         </div>
 
         <div>
@@ -126,9 +122,7 @@ export function InputDoctors() {
             maxLength={5}
             placeholder="numero do CRM"
           />
-          {errors.crm && (
-            <StyledValidation>{errors.crm.message}</StyledValidation>
-          )}
+          {errors.crm && <span>{errors.crm.message}</span>}
         </div>
 
         <div>
@@ -139,7 +133,7 @@ export function InputDoctors() {
             placeholder="digite a especialização medica"
           />
           {errors.specialization && (
-            <StyledValidation>{errors.specialization.message}</StyledValidation>
+            <span>{errors.specialization.message}</span>
           )}
         </div>
 
@@ -151,7 +145,7 @@ export function InputDoctors() {
         </FlexDiv>
       </form>
       {editing && (
-        <StyledLink2 to="/doctors/list">
+        <StyledLink2 to="/appointments/calendar">
           <CloseOutlined />
           Cancelar
         </StyledLink2>

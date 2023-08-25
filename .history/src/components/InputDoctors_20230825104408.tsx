@@ -126,9 +126,7 @@ export function InputDoctors() {
             maxLength={5}
             placeholder="numero do CRM"
           />
-          {errors.crm && (
-            <StyledValidation>{errors.crm.message}</StyledValidation>
-          )}
+          {errors.crm && <span>{errors.crm.message}</span>}
         </div>
 
         <div>
@@ -139,7 +137,7 @@ export function InputDoctors() {
             placeholder="digite a especialização medica"
           />
           {errors.specialization && (
-            <StyledValidation>{errors.specialization.message}</StyledValidation>
+            <span>{errors.specialization.message}</span>
           )}
         </div>
 

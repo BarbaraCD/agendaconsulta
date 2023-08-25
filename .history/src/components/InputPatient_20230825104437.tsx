@@ -128,9 +128,7 @@ export function InputPatients() {
             maxLength={3}
             placeholder="idade do paciente"
           />
-          {errors.age && (
-            <StyledValidation>{errors.age.message}</StyledValidation>
-          )}
+          {errors.age && <span>{errors.age.message}</span>}
         </div>
 
         <div>
@@ -141,9 +139,7 @@ export function InputPatients() {
             id="telephone"
             placeholder="telefone para contato"
           />
-          {errors.telephone && (
-            <StyledValidation>{errors.telephone.message}</StyledValidation>
-          )}
+          {errors.telephone && <span>{errors.telephone.message}</span>}
         </div>
 
         <div>
@@ -154,9 +150,7 @@ export function InputPatients() {
             id="email"
             placeholder="email@example.com"
           />
-          {errors.email && (
-            <StyledValidation>{errors.email.message}</StyledValidation>
-          )}
+          {errors.email && <span>{errors.email.message}</span>}
         </div>
         <FlexDiv>
           <SubmitButton type="submit" disabled={isSubmitting}>

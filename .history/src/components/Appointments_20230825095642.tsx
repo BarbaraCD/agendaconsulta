@@ -94,15 +94,15 @@ export const CreateAppointments: React.FC = () => {
   }, [])
 
   async function fetchInfos() {
-    const responseDoc = await getDoctors()
-    const responsePat = await getPatient()
-    setDoctors(responseDoc)
-    setPatients(responsePat)
     if (!id) return
     try {
+      const responseDoc = await getDoctors()
+      const responsePat = await getPatient()
       const responseAp = await getAppointmentById(Number(id))
       const responseDate = {
         ...responseAp,
+        responseDoc,
+        responsePat,
       }
       responseDate.date = new Date(responseDate.date)
       reset(responseDate as unknown as AppointmentSchemaType)
@@ -129,11 +129,11 @@ export const CreateAppointments: React.FC = () => {
     try {
       if (id) {
         await updateAppointment(Number(id), data)
-        navigate(-1)
       } else {
         await createAppointment(data)
       }
       setSuccessMessage('Consulta agendada/atualizada com sucesso!')
+      navigate(-1)
     } catch (error) {
       setErrorMessage('Erro ao agendar/atualizar consulta.')
     }

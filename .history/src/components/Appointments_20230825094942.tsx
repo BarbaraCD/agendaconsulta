@@ -31,8 +31,8 @@ import { PatientsProps } from './PatientTable'
 import { z } from 'zod'
 import { Controller, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { getDoctors } from '../services/doctor.services'
-import { getPatient } from '../services/patient.services'
+import { getDoctorById, getDoctors } from '../services/doctor.services'
+import { getPatient, getPatientById } from '../services/patient.services'
 
 export type AppointmentsProps = {
   doctorID: number
@@ -94,13 +94,13 @@ export const CreateAppointments: React.FC = () => {
   }, [])
 
   async function fetchInfos() {
-    const responseDoc = await getDoctors()
-    const responsePat = await getPatient()
-    setDoctors(responseDoc)
-    setPatients(responsePat)
     if (!id) return
     try {
+      const responseDoc = await getDoctorById(Number(id))
+      const responsePat = await getPatientById(Number(id))
       const responseAp = await getAppointmentById(Number(id))
+      reset(responseDoc.id)
+      setPatients(responsePat.id)
       const responseDate = {
         ...responseAp,
       }
@@ -129,11 +129,11 @@ export const CreateAppointments: React.FC = () => {
     try {
       if (id) {
         await updateAppointment(Number(id), data)
-        navigate(-1)
       } else {
         await createAppointment(data)
       }
       setSuccessMessage('Consulta agendada/atualizada com sucesso!')
+      navigate(-1)
     } catch (error) {
       setErrorMessage('Erro ao agendar/atualizar consulta.')
     }

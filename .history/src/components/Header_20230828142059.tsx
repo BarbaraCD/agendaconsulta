@@ -2,12 +2,11 @@ import { Link } from 'react-router-dom'
 import { styled } from 'styled-components'
 
 const ContainerHeader = styled.div`
+  background-color: ${(props) => props.theme.colors.primary};
   padding: 12px 16px;
-  width: 100%;
-  min-width: 200px;
+  min-width: 100%;
   font-weight: 700;
   overflow: visible;
-  background-color: ${(props) => props.theme.colors.primary};
 `
 
 const StyleLink = styled(Link)`
@@ -17,6 +16,7 @@ const StyleLink = styled(Link)`
   align-items: center;
   justify-content: center;
   color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.colors.white};
 `
 
 export function Header() {

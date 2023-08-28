@@ -9,9 +9,7 @@ export const StyledSidebar = styled.div`
   font-weight: 500;
   justify-content: flex-start;
   align-items: flex-start;
-  overflow: auto;
-  height: 94vh;
-  min-height: 100%;
+  min-height: 100vh;
 `
 
 export const StyledList = styled.ul`

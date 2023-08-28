@@ -9,14 +9,16 @@ export const StyledSidebar = styled.div`
   font-weight: 500;
   justify-content: flex-start;
   align-items: flex-start;
-  overflow: auto;
-  height: 94vh;
-  min-height: 100%;
+  overflow: visible;
+  height: 100vh;
 `
 
 export const StyledList = styled.ul`
   list-style: none;
   padding: 0.5rem;
+  overflow: visible;
+  justify-content: start;
+  align-items: start;
 
   li {
     cursor: pointer;

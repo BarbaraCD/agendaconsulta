@@ -10,8 +10,7 @@ export const StyledSidebar = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   overflow: auto;
-  height: 94vh;
-  min-height: 100%;
+  height: auto;
 `
 
 export const StyledList = styled.ul`

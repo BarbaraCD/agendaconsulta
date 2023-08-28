@@ -3,7 +3,7 @@ import { styled } from 'styled-components'
 
 const ContainerHeader = styled.div`
   padding: 12px 16px;
-  width: 100%;
+  width: 100vw;
   min-width: 200px;
   font-weight: 700;
   overflow: visible;

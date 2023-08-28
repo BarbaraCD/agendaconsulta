@@ -111,10 +111,8 @@ export function InputPatients() {
           <StyledInput
             {...register('name')}
             type="text"
-            name="name"
-            id="name"
+            name="nome"
             placeholder="nome do paciente"
-            autoComplete="off"
           />
           {errors.name && (
             <StyledValidation>{errors.name.message}</StyledValidation>
@@ -127,10 +125,8 @@ export function InputPatients() {
             {...register('age')}
             type="number"
             name="age"
-            id="age"
             maxLength={3}
             placeholder="idade do paciente"
-            autoComplete="off"
           />
           {errors.age && (
             <StyledValidation>{errors.age.message}</StyledValidation>
@@ -143,9 +139,7 @@ export function InputPatients() {
             {...register('telephone')}
             type="number"
             name="telephone"
-            id="telephone"
             placeholder="telefone para contato"
-            autoComplete="off"
           />
           {errors.telephone && (
             <StyledValidation>{errors.telephone.message}</StyledValidation>
@@ -157,10 +151,8 @@ export function InputPatients() {
           <StyledInput
             {...register('email')}
             type="text"
-            id="email"
             name="email"
             placeholder="email@example.com"
-            autoComplete="off"
           />
           {errors.email && (
             <StyledValidation>{errors.email.message}</StyledValidation>

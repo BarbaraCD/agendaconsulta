@@ -122,7 +122,7 @@ export function InputPatients() {
         </div>
 
         <div>
-          <label htmlFor="age">Idade:</label>
+          <label>Idade:</label>
           <StyledInput
             {...register('age')}
             type="number"
@@ -138,7 +138,7 @@ export function InputPatients() {
         </div>
 
         <div>
-          <label htmlFor="telephone">Telefone:</label>
+          <label>Telefone:</label>
           <StyledInput
             {...register('telephone')}
             type="number"
@@ -153,7 +153,7 @@ export function InputPatients() {
         </div>
 
         <div>
-          <label htmlFor="email">Email:</label>
+          <label>Email:</label>
           <StyledInput
             {...register('email')}
             type="text"

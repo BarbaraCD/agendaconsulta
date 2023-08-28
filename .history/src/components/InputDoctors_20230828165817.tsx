@@ -111,10 +111,7 @@ export function InputDoctors() {
           <StyledInput
             {...register('name')}
             type="text"
-            name="name"
-            id="name"
             placeholder="nome do médico"
-            autoComplete="off"
           />
           {errors.name && (
             <StyledValidation>{errors.name.message}</StyledValidation>
@@ -126,11 +123,8 @@ export function InputDoctors() {
           <StyledInput
             {...register('crm')}
             type="number"
-            name="crm"
-            id="crm"
             maxLength={5}
             placeholder="numero do CRM"
-            autoComplete="off"
           />
           {errors.crm && (
             <StyledValidation>{errors.crm.message}</StyledValidation>
@@ -142,10 +136,7 @@ export function InputDoctors() {
           <StyledInput
             {...register('specialization')}
             type="text"
-            name="specialization"
-            id="specialization"
             placeholder="digite a especialização medica"
-            autoComplete="off"
           />
           {errors.specialization && (
             <StyledValidation>{errors.specialization.message}</StyledValidation>

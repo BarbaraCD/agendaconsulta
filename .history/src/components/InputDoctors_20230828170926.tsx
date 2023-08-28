@@ -114,7 +114,6 @@ export function InputDoctors() {
             name="name"
             id="name"
             placeholder="nome do médico"
-            autoComplete="off"
           />
           {errors.name && (
             <StyledValidation>{errors.name.message}</StyledValidation>
@@ -130,7 +129,6 @@ export function InputDoctors() {
             id="crm"
             maxLength={5}
             placeholder="numero do CRM"
-            autoComplete="off"
           />
           {errors.crm && (
             <StyledValidation>{errors.crm.message}</StyledValidation>
@@ -145,7 +143,6 @@ export function InputDoctors() {
             name="specialization"
             id="specialization"
             placeholder="digite a especialização medica"
-            autoComplete="off"
           />
           {errors.specialization && (
             <StyledValidation>{errors.specialization.message}</StyledValidation>

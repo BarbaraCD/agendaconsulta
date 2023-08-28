@@ -21,9 +21,10 @@ import {
   DeleteOutlined,
   EditOutlined,
 } from '@ant-design/icons'
-import { PatientsTypes } from '../model/patients.ts'
-import { DoctorsTypes } from '../model/doctors.ts'
+import { PatientSchemaType } from './InputPatient.tsx'
+
 import { AppointmentsProps } from './Appointments.tsx'
+import { DoctorSchemaType } from './InputDoctors.tsx'
 
 const localizer = momentLocalizer(moment)
 
@@ -34,8 +35,8 @@ interface Event {
 }
 
 type SelectedAppointmentType = AppointmentsProps & {
-  doctor: DoctorsTypes
-  patient: PatientsTypes
+  doctor: DoctorSchemaType
+  patient: PatientSchemaType
 }
 
 export const AppointmentsCalendar = () => {
@@ -134,7 +135,7 @@ export const AppointmentsCalendar = () => {
             <p>Médico: {selectedAppointment.doctor.name}</p>
             <p>Paciente: {selectedAppointment.patient.name}</p>
             <p>
-              Data:{' '}
+              Data:{null}
               {moment(selectedAppointment.date).format('DD/MM/YYYY HH:mm')}
             </p>
             <p>Sintomas: {selectedAppointment.symptoms}</p>

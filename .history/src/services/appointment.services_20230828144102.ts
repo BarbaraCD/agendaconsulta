@@ -7,6 +7,7 @@ import { api } from './ApiConfig'
 export async function getAppointment(): Promise<AppointmentsProps[]> {
   try {
     const response = await api.get('/appointment')
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return response.data
   } catch (error) {
     throw new Error('Erro ao obter dados dos agendamentos:')
@@ -34,6 +35,7 @@ export async function updateAppointment(
 ) {
   try {
     const response = await api.put(`/appointment/${id}`, data)
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return response.data
   } catch (error) {
     throw new Error('Erro ao obter dados da consulta:')

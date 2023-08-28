@@ -23,8 +23,8 @@ export const StyledLink2 = styled(Link)`
   color: ${(props) => props.theme.colors.sbcolor};
   background-color: red;
   font-weight: 500;
-  border-radius: 6px;
-  margin-top: 2rem;
+  border-radius: 2rem;
+  margin-top: 5rem;
   padding: 0.5rem;
 `
 

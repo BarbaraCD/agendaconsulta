@@ -27,6 +27,7 @@ export async function createPatient(data: PatientSchemaType) {
 export async function updatePatient(id: number, data: PatientSchemaType) {
   try {
     const response = await api.put(`/patient/${id}`, data)
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return response.data
   } catch (error) {
     throw new Error('Erro ao obter dados dos pacientes:')

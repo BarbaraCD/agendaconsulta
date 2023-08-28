@@ -5,6 +5,7 @@ import { api } from './ApiConfig'
 export async function getDoctors(): Promise<DoctorsProps[]> {
   try {
     const response = await api.get('/doctor')
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return response.data
   } catch (error) {
     throw new Error('Erro ao obter dados dos pacientes:')

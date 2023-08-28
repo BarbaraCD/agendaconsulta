@@ -21,9 +21,8 @@ import {
   DeleteOutlined,
   EditOutlined,
 } from '@ant-design/icons'
-import { PatientsTypes } from '../model/patients.ts'
-import { DoctorsTypes } from '../model/doctors.ts'
-import { AppointmentsProps } from './Appointments.tsx'
+import { PatientsTypes } from '../model/patients'
+import { DoctorsTypes } from '../model/doctors'
 
 const localizer = momentLocalizer(moment)
 

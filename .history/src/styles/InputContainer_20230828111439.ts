@@ -46,7 +46,6 @@ export const StyledSelect = styled(Select)`
 `
 
 export const SubmitButton = styled.button`
-  margin-top: 0.5rem;
   padding: 0.5rem;
   width: 15vw;
   border-radius: 4px;

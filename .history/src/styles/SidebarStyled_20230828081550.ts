@@ -10,24 +10,23 @@ export const StyledSidebar = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   overflow: auto;
-  height: 100%;
-  min-height: 100vh;
+  height: 100vh;
 `
 
 export const StyledList = styled.ul`
   list-style: none;
-  padding: 0.5rem;
+  padding: 12px;
 
   li {
     cursor: pointer;
-    padding: 1rem;
-    line-height: 1.3rem;
+    padding: 12px;
+    line-height: 22px;
   }
 
   a {
     text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
-    margin: 0.5rem;
+    margin: 8px;
     word-break: break-all;
   }
 `

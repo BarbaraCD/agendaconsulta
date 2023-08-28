@@ -46,8 +46,7 @@ export const StyledSelect = styled(Select)`
 `
 
 export const SubmitButton = styled.button`
-  margin-top: 0.5rem;
-  padding: 0.5rem;
+  padding: 8px;
   width: 15vw;
   border-radius: 4px;
   color: ${(props) => props.theme.colors.white};
@@ -89,10 +88,11 @@ export const MessageError = styled.p`
 `
 
 export const StyledInput = styled.input`
+  /* margin-left: 8px; */
   width: 100%;
-  padding: 0.5rem;
+  padding: 8px;
   border: none;
-  border-radius: 0.2rem;
+  border-radius: 4px;
   overflow: hidden;
 `
 
@@ -102,7 +102,7 @@ export const PatSpan = styled.span`
   background-color: ${(props) => props.theme.colors[100]};
   font-weight: 500;
   border-radius: 4px;
-  margin-top: 1rem;
+  margin-top: 12px;
 `
 export const FlexDiv = styled.div`
   display: flex;

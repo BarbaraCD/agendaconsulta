@@ -1,4 +1,6 @@
 import { Modal } from 'antd'
+import button from 'antd/es/button'
+import space from 'antd/es/space'
 import DatePicker from 'react-datepicker'
 import { Link } from 'react-router-dom'
 import { styled } from 'styled-components'
@@ -50,17 +52,6 @@ export const StyledModal = styled(Modal)`
     font-size: ${(props) => props.theme.size.lg};
   }
 
-  button {
-    margin: 0.5rem;
-    padding: 0.2rem;
-    cursor: pointer;
-    border: none;
-    font-weight: 500;
-    color: ${(props) => props.theme.colors.primary};
-    background-color: ${(props) => props.theme.colors[100]};
-    font-size: ${(props) => props.theme.size.lg};
-  }
-`
 
 export const StyledQuestion = styled.div`
   p {

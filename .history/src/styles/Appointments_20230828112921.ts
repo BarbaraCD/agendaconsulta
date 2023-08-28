@@ -52,7 +52,7 @@ export const StyledModal = styled(Modal)`
 
   button {
     margin: 0.5rem;
-    padding: 0.2rem;
+    padding: 4px;
     cursor: pointer;
     border: none;
     font-weight: 500;

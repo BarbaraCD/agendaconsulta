@@ -17,7 +17,7 @@ export const Container3 = styled.div`
     width: 100%;
     height: 50%;
     border-collapse: collapse;
-    border: 1px solid ${(props) => props.theme.colors.head};
+    border: 1px solid #ccc;
     word-break: break-all;
     overflow: hidden;
 
@@ -34,12 +34,12 @@ export const Container3 = styled.div`
   }
 `
 export const StyleList = styled.tr`
-  border: 1px solid ${(props) => props.theme.colors.head};
+  border: 1px solid #ccc;
   border-radius: 4px;
   font-size: ${(props) => props.theme.size.md};
 
   td {
-    padding: 0.5rem;
+    padding: 8px;
     border-bottom: 1px solid ${(props) => props.theme.colors.head};
     text-align: center;
     width: 25%;

@@ -46,13 +46,13 @@ export const StyledModal = styled(Modal)`
   }
 
   p {
-    margin-left: 0.5rem;
+    margin-left: 8px;
     font-size: ${(props) => props.theme.size.lg};
   }
 
   button {
-    margin: 0.5rem;
-    padding: 0.2rem;
+    margin: 8px;
+    padding: 4px;
     cursor: pointer;
     border: none;
     font-weight: 500;

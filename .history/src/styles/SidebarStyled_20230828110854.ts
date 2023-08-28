@@ -27,7 +27,7 @@ export const StyledList = styled.ul`
   a {
     text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
-    margin: 0.5rem;
+    margin: 8px;
     word-break: break-all;
   }
 `

@@ -6,7 +6,7 @@ import { styled } from 'styled-components'
 export const StyledAppointments = styled.div`
   color: ${(props) => props.theme.colors.black};
   font-size: ${(props) => props.theme.size.md};
-  padding: 1.6rem 0;
+  padding: 20px 0;
   overflow: hidden;
 `
 
@@ -16,7 +16,7 @@ export const StyledLink = styled(Link)`
   background-color: ${(props) => props.theme.colors[100]};
   font-weight: 500;
   border-radius: 4px;
-  margin-top: 0.8rem;
+  margin-top: 12px;
 `
 
 export const StyledLink2 = styled(Link)`
@@ -24,9 +24,9 @@ export const StyledLink2 = styled(Link)`
   color: ${(props) => props.theme.colors.sbcolor};
   background-color: red;
   font-weight: 500;
-  border-radius: 2rem;
-  margin-top: 2rem;
-  padding: 0.5rem;
+  border-radius: 4px;
+  margin-top: 24px;
+  padding: 8px;
 `
 
 export const CalendarStyled = styled.div`
@@ -40,19 +40,19 @@ export const StyledModal = styled(Modal)`
     background-color: ${(props) => props.theme.colors[100]};
     color: ${(props) => props.theme.colors.primary};
     font-size: ${(props) => props.theme.size.xl};
-    padding: 0.8rem;
+    padding: 10px;
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
   }
 
   p {
-    margin-left: 0.5rem;
+    margin-left: 8px;
     font-size: ${(props) => props.theme.size.lg};
   }
 
   button {
-    margin: 0.5rem;
-    padding: 0.2rem;
+    margin: 8px;
+    padding: 4px;
     cursor: pointer;
     border: none;
     font-weight: 500;

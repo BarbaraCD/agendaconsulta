@@ -79,7 +79,7 @@ export const CreateAppointments: React.FC = () => {
   const [editing, setEditing] = useState<boolean>(false)
   const [doctors, setDoctors] = useState<DoctorsProps[]>([])
   const [patients, setPatients] = useState<PatientsProps[]>([])
-  const [appointments] = useState<AppointmentsProps[]>([])
+  const [appointments, setAppointments] = useState<AppointmentsProps[]>([])
 
   const [successMessage, setSuccessMessage] = useState<string | null>(null)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)

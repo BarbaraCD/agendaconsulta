@@ -4,7 +4,7 @@ import { Select } from 'antd'
 export const InputContainer = styled.main`
   color: ${(props) => props.theme.colors.black};
   font-size: ${(props) => props.theme.size.md};
-  padding: 0.5rem 0;
+  padding: 10px 0;
 
   div {
     margin: 0.2rem 0.2rem 0.2rem 0;
@@ -14,7 +14,7 @@ export const InputContainer = styled.main`
     background-color: ${(props) => props.theme.colors[100]};
     color: ${(props) => props.theme.colors.primary};
     font-size: ${(props) => props.theme.size.xl};
-    margin-bottom: 0.8rem;
+    margin-bottom: 12px;
   }
 
   label {
@@ -37,7 +37,7 @@ export const ApFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 `
 
 export const StyledSelect = styled(Select)`
@@ -46,8 +46,7 @@ export const StyledSelect = styled(Select)`
 `
 
 export const SubmitButton = styled.button`
-  margin-top: 0.5rem;
-  padding: 0.5rem;
+  padding: 8px;
   width: 15vw;
   border-radius: 4px;
   color: ${(props) => props.theme.colors.white};
@@ -89,10 +88,11 @@ export const MessageError = styled.p`
 `
 
 export const StyledInput = styled.input`
+  /* margin-left: 8px; */
   width: 100%;
-  padding: 0.5rem;
+  padding: 8px;
   border: none;
-  border-radius: 0.2rem;
+  border-radius: 4px;
   overflow: hidden;
 `
 
@@ -102,7 +102,7 @@ export const PatSpan = styled.span`
   background-color: ${(props) => props.theme.colors[100]};
   font-weight: 500;
   border-radius: 4px;
-  margin-top: 1rem;
+  margin-top: 12px;
 `
 export const FlexDiv = styled.div`
   display: flex;

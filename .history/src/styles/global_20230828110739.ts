@@ -26,5 +26,5 @@ export const SidebarGlobal = styled.div`
 
 export const Content = styled.div`
   flex: 1;
-  margin: 0 1rem;
+  margin: 0 4rem;
 `

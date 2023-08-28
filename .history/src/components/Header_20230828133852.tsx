@@ -5,7 +5,7 @@ const ContainerHeader = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
   padding: 12px 16px;
   flex: 1;
-  min-width: 100px;
+  width: 100%;
   color: ${(props) => props.theme.colors.white};
   font-weight: 700;
 `

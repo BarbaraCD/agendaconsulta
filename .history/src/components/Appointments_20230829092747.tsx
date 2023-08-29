@@ -100,6 +100,7 @@ export const CreateAppointments: React.FC = () => {
     const response = await getAppointment()
     setDoctors(responseDoc)
     setPatients(responsePat)
+
     setAppointments(response)
     if (!id) return
     try {

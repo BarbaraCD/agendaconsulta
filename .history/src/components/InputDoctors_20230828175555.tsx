@@ -95,10 +95,6 @@ export function InputDoctors() {
         await createDoctor(data)
       }
       setSuccessMessage('Médico salvo com sucesso!')
-      setTimeout(() => {
-        setSuccessMessage(null)
-      }, 2000)
-      reset()
     } catch (error) {
       setErrorMessage('Erro ao cadastrar/atualizar médico.')
     }

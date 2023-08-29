@@ -67,6 +67,18 @@
       "crm": "98653",
       "specialization": "Clinico Geral",
       "id": 4
+    },
+    {
+      "name": "Demi Lovato",
+      "crm": "32654",
+      "specialization": "Otorrinolaringologista",
+      "id": 5
+    },
+    {
+      "name": "Ariana Grande",
+      "crm": "25896",
+      "specialization": "Ginecologista",
+      "id": 6
     }
   ],
   "appointment": [
@@ -97,6 +109,20 @@
       "date": "2023-09-04T12:00:00.000Z",
       "symptoms": "corna",
       "id": 4
+    },
+    {
+      "doctorID": 4,
+      "patientID": 4,
+      "date": "2023-09-05T16:00:00.000Z",
+      "symptoms": "zdgsdfh sfdgbsfgbs",
+      "id": 5
+    },
+    {
+      "doctorID": 4,
+      "patientID": 3,
+      "date": "2023-08-30T19:00:00.000Z",
+      "symptoms": "kjgtyf kutgfvyj jhgvkgv",
+      "id": 6
     }
   ]
 }

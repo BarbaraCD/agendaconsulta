@@ -97,7 +97,7 @@ export function InputPatients() {
       setSuccessMessage('Paciente salvo com sucesso!')
       setTimeout(() => {
         setSuccessMessage(null)
-      }, 2000)
+      }, 3000)
       reset()
     } catch (error) {
       setErrorMessage('Erro ao cadastrar/atualizar paciente.')

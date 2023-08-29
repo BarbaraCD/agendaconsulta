@@ -1,9 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-
 import { useEffect, useState } from 'react'
+import { zodResolver } from '@hookform/resolvers/zod'
 import {
   FlexDiv,
   InputContainer,
@@ -13,16 +12,16 @@ import {
   StyledValidation,
   SubmitButton,
 } from '../styles/InputContainer'
-import {
-  createPatient,
-  updatePatient,
-  getPatientById,
-} from '../services/patient.services'
 import { StyledLink, StyledLink2 } from '../styles/Appointments'
+import {
+  createDoctor,
+  getDoctorById,
+  updateDoctor,
+} from '../services/doctor.services'
 import { useParams, useNavigate } from 'react-router-dom'
 import { CloseOutlined } from '@ant-design/icons'
 
-const patientSchema = z.object({
+const doctorSchema = z.object({
   name: z
     .string()
     .nonempty('O nome é obrigatório')
@@ -35,34 +34,35 @@ const patientSchema = z.object({
         })
         .join(' ')
     }),
-  age: z.coerce.number().min(12, 'Idade obrigatória').max(120),
-  telephone: z
+  crm: z
     .string()
-    .min(11, 'Telefone é obrigatório')
-    .max(11, 'Telefone deve conter 11 digitos'),
-  email: z
+    .min(5, 'CRM é obrigatório')
+    .max(5, 'CRM deve conter 5 digitos'),
+  specialization: z
     .string()
-    .nonempty('O email é obrigatório')
-    .email('Formato de email inválido')
-    .toLowerCase(),
+    .nonempty('A especialização é obrigatória')
+    .transform((specialization) => {
+      return specialization
+        .trim()
+        .split(' ')
+        .map((word) => {
+          return word[0].toLocaleUpperCase().concat(word.substring(1))
+        })
+        .join(' ')
+    }),
 })
 
-export type PatientSchemaType = z.infer<typeof patientSchema>
+export type DoctorSchemaType = z.infer<typeof doctorSchema>
 
-export function InputPatients() {
+export function InputDoctors() {
   const {
     reset,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<PatientSchemaType>({
-    resolver: zodResolver(patientSchema),
-    defaultValues: {
-      name: '',
-      age: null || undefined,
-      telephone: null || undefined,
-      email: '',
-    },
+  } = useForm<DoctorSchemaType>({
+    resolver: zodResolver(doctorSchema),
+    defaultValues: { name: '', crm: '', specialization: '' },
   })
 
   const navigate = useNavigate()
@@ -72,35 +72,35 @@ export function InputPatients() {
   const [editing, setEditing] = useState<boolean>(false)
 
   useEffect(() => {
-    fetchPatients()
+    fetchDoctor()
   }, [])
 
-  async function fetchPatients() {
+  async function fetchDoctor() {
     if (!id) return
     try {
-      const response = await getPatientById(Number(id))
-      reset(response as unknown as PatientSchemaType)
+      const response = await getDoctorById(Number(id))
+      reset(response as unknown as DoctorSchemaType)
       setEditing(true)
     } catch (error) {
-      console.error('Error fetching Patients:', error)
+      console.error('Error fetching Doctors:', error)
     }
   }
 
-  async function createNewPatient(data: PatientSchemaType) {
+  async function createNewDoctor(data: DoctorSchemaType) {
     try {
       if (id) {
-        await updatePatient(Number(id), data)
+        await updateDoctor(Number(id), data)
         navigate(-1)
       } else {
-        await createPatient(data)
+        await createDoctor(data)
       }
-      setSuccessMessage('Paciente salvo com sucesso!')
+      setSuccessMessage('Médico salvo com sucesso!')
       setTimeout(() => {
         setSuccessMessage(null)
-      }, 2000)
+      }, 3000)
       reset()
     } catch (error) {
-      setErrorMessage('Erro ao cadastrar/atualizar paciente.')
+      setErrorMessage('Erro ao cadastrar/atualizar médico.')
     }
   }
 
@@ -108,8 +108,8 @@ export function InputPatients() {
     <InputContainer>
       {successMessage && <MessageSaved>{successMessage}</MessageSaved>}
       {errorMessage && <MessageError>{errorMessage}</MessageError>}
-      <h3>Cadastre um paciente</h3>
-      <form onSubmit={handleSubmit(createNewPatient)}>
+      <h3>Cadastre um médico</h3>
+      <form onSubmit={handleSubmit(createNewDoctor)}>
         <div>
           <label htmlFor="name">Nome:</label>
           <StyledInput
@@ -117,7 +117,7 @@ export function InputPatients() {
             type="text"
             name="name"
             id="name"
-            placeholder="nome do paciente"
+            placeholder="nome do médico"
             autoComplete="off"
           />
           {errors.name && (
@@ -126,60 +126,45 @@ export function InputPatients() {
         </div>
 
         <div>
-          <label htmlFor="age">Idade:</label>
+          <label htmlFor="crm">CRM:</label>
           <StyledInput
-            {...register('age')}
+            {...register('crm')}
             type="number"
-            name="age"
-            id="age"
-            maxLength={3}
-            placeholder="idade do paciente"
+            name="crm"
+            id="crm"
+            maxLength={5}
+            placeholder="numero do CRM"
             autoComplete="off"
           />
-          {errors.age && (
-            <StyledValidation>{errors.age.message}</StyledValidation>
+          {errors.crm && (
+            <StyledValidation>{errors.crm.message}</StyledValidation>
           )}
         </div>
 
         <div>
-          <label htmlFor="telephone">Telefone:</label>
+          <label htmlFor="specialization">Especialização:</label>
           <StyledInput
-            {...register('telephone')}
-            type="number"
-            name="telephone"
-            id="telephone"
-            placeholder="telefone para contato"
-            autoComplete="off"
-          />
-          {errors.telephone && (
-            <StyledValidation>{errors.telephone.message}</StyledValidation>
-          )}
-        </div>
-
-        <div>
-          <label htmlFor="email">Email:</label>
-          <StyledInput
-            {...register('email')}
+            {...register('specialization')}
             type="text"
-            id="email"
-            name="email"
-            placeholder="email@example.com"
+            name="specialization"
+            id="specialization"
+            placeholder="digite a especialização medica"
             autoComplete="off"
           />
-          {errors.email && (
-            <StyledValidation>{errors.email.message}</StyledValidation>
+          {errors.specialization && (
+            <StyledValidation>{errors.specialization.message}</StyledValidation>
           )}
         </div>
+
         <FlexDiv>
           <SubmitButton type="submit" disabled={isSubmitting}>
             <p>Salvar</p>
           </SubmitButton>
-
-          <StyledLink to="/patients/list">Pacientes cadastrados</StyledLink>
+          <StyledLink to="/doctors/list">Médicos cadastrados</StyledLink>
         </FlexDiv>
       </form>
       {editing && (
-        <StyledLink2 to="/patients/list">
+        <StyledLink2 to="/doctors/list">
           <CloseOutlined />
           Cancelar
         </StyledLink2>

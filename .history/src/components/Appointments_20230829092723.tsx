@@ -97,9 +97,9 @@ export const CreateAppointments: React.FC = () => {
   async function fetchInfos() {
     const responseDoc = await getDoctors()
     const responsePat = await getPatient()
-    const response = await getAppointment()
     setDoctors(responseDoc)
     setPatients(responsePat)
+    const response = await getAppointment()
     setAppointments(response)
     if (!id) return
     try {

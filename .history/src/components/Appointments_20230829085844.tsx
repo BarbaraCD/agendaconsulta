@@ -6,7 +6,6 @@ import { Select } from 'antd'
 
 import {
   createAppointment,
-  getAppointment,
   getAppointmentById,
   updateAppointment,
 } from '../services/appointment.services'
@@ -90,17 +89,15 @@ export const CreateAppointments: React.FC = () => {
 
   useEffect(() => {
     fetchInfos().catch((error) => {
-      console.error('Error fetching Infos:', error)
+      console.error('Error fetching Patients:', error)
     })
   }, [])
 
   async function fetchInfos() {
     const responseDoc = await getDoctors()
     const responsePat = await getPatient()
-    const response = await getAppointment()
     setDoctors(responseDoc)
     setPatients(responsePat)
-    setAppointments(response)
     if (!id) return
     try {
       const responseAp = await getAppointmentById(Number(id))
@@ -136,13 +133,13 @@ export const CreateAppointments: React.FC = () => {
       } else {
         await createAppointment(data)
       }
-      setSuccessMessage('Consulta agendada com sucesso!')
+      setSuccessMessage('Consulta agendada/atualizada com sucesso!')
       setTimeout(() => {
         setSuccessMessage(null)
       }, 2000)
       reset()
     } catch (error) {
-      setErrorMessage('Erro ao agendar consulta.')
+      setErrorMessage('Erro ao agendar/atualizar consulta.')
     }
   }
 

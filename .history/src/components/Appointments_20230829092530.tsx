@@ -92,15 +92,16 @@ export const CreateAppointments: React.FC = () => {
     fetchInfos().catch((error) => {
       console.error('Error fetching Infos:', error)
     })
+    fetchAppointments().catch((error) => {
+      console.error('Error fetching Appointments:', error)
+    })
   }, [])
 
   async function fetchInfos() {
     const responseDoc = await getDoctors()
     const responsePat = await getPatient()
-    const response = await getAppointment()
     setDoctors(responseDoc)
     setPatients(responsePat)
-    setAppointments(response)
     if (!id) return
     try {
       const responseAp = await getAppointmentById(Number(id))
@@ -113,6 +114,11 @@ export const CreateAppointments: React.FC = () => {
     } catch (error) {
       console.error('Error fetching Infos:', error)
     }
+  }
+
+  async function fetchAppointments() {
+    const response = await getAppointment()
+    setAppointments(response)
   }
 
   function isWeekday(date: Date) {

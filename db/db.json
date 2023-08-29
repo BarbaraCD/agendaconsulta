@@ -22,13 +22,6 @@
       "id": 3
     },
     {
-      "name": "José David Diniz",
-      "age": 14,
-      "telephone": "64999999999",
-      "email": "jose@gmail.com",
-      "id": 4
-    },
-    {
       "name": "Alex Andre Silva",
       "age": 25,
       "telephone": "64988888888",
@@ -41,6 +34,13 @@
       "telephone": "64986956545",
       "email": "damon@gmail.com",
       "id": 6
+    },
+    {
+      "name": "Rogerio Cardoso",
+      "age": 56,
+      "telephone": "64985654875",
+      "email": "rogerio.cardoso@gmail.com",
+      "id": 7
     }
   ],
   "doctor": [
@@ -123,6 +123,13 @@
       "date": "2023-08-30T19:00:00.000Z",
       "symptoms": "kjgtyf kutgfvyj jhgvkgv",
       "id": 6
+    },
+    {
+      "doctorID": 2,
+      "patientID": 5,
+      "date": "2023-09-08T18:30:00.000Z",
+      "symptoms": "sindrome do panico",
+      "id": 7
     }
   ]
 }

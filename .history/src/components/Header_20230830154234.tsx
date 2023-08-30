@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { styled } from 'styled-components'
-import { HomeOutlined } from '@ant-design/icons'
+import { MenuOutlined } from '@ant-design/icons'
 
 const ContainerHeader = styled.div`
   padding: 12px 16px;
@@ -26,7 +26,7 @@ export function Header() {
   return (
     <ContainerHeader>
       <StyleLink to="/">
-        <HomeOutlined />
+        <MenuOutlined />
         <p>Agenda consulta</p>
       </StyleLink>
     </ContainerHeader>

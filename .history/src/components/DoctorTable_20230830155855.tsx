@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
 import { deleteDoctor, getDoctors } from '../services/doctor.services'
-import { Container3, StyleList } from '../styles/CreateContainer'
+import {
+  Container3,
+  StyleList,
+  StyledEditIcon,
+} from '../styles/CreateContainer'
 import { FlexDiv, StyledDelete, StyledLink } from '../styles/InputContainer'
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons'
 import { Popconfirm } from 'antd'

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { styled } from 'styled-components'
-import { HomeOutlined } from '@ant-design/icons'
+import { HomeOutlined, HomeOutlined } from '@ant-design/icons'
 
 const ContainerHeader = styled.div`
   padding: 12px 16px;

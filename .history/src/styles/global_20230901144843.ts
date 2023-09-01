@@ -14,6 +14,9 @@ export default createGlobalStyle`
     background: ${(props) => props.theme.colors.white};
     font-size: ${(props) => props.theme.size.xl};
 
+    @media (max-width: 768px) {
+      background-color: red;
+    }
   }
 `
 

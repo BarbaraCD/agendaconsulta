@@ -1,18 +1,16 @@
 import { Menu, MenuItem, Sidebar } from 'react-pro-sidebar'
 import styled from 'styled-components'
 
+const breakpoints = {
+  small: '768px',
+}
+
 export const StyledSidebar = styled(Sidebar)`
   font-size: ${(props) => props.theme.size.xl};
   font-weight: 500;
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  width: ${({ collapsed }) => (collapsed ? '60px' : '200px')};
-  transition: width 0.1s ease;
-
-  @media (max-width: 768px) {
-    width: ${({ collapsed }) => (collapsed ? '0px' : '60px')};
-  }
 `
 
 export const StyledList = styled(Menu)`

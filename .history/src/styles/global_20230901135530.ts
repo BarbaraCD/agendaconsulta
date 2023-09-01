@@ -13,16 +13,12 @@ export default createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     background: ${(props) => props.theme.colors.white};
     font-size: ${(props) => props.theme.size.xl};
-
+    display: flex;
   }
 `
 
 export const Container = styled.div`
   display: flex;
-`
-
-export const SidebarGlobal = styled.div`
-  width: 16%;
 `
 
 export const Content = styled.div`

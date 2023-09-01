@@ -7,6 +7,10 @@ import { StyledList, StyledItem, StyledSidebar } from '../styles/SidebarStyled'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
+export const breakpoints = {
+  small: '768px',
+}
+
 export function SidebarComponent() {
   const [collapsed, setCollapsed] = useState(false)
 

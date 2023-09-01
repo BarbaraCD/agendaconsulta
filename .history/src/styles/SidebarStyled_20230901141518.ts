@@ -9,10 +9,6 @@ export const StyledSidebar = styled(Sidebar)`
   align-items: center;
   width: ${({ collapsed }) => (collapsed ? '60px' : '200px')};
   transition: width 0.1s ease;
-
-  @media (max-width: 768px) {
-    width: ${({ collapsed }) => (collapsed ? '0px' : '60px')};
-  }
 `
 
 export const StyledList = styled(Menu)`

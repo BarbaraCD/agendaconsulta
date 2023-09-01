@@ -1,7 +1,7 @@
 import {
-  ColumnWidthOutlined,
   ScheduleOutlined,
   UserOutlined,
+  VerticalRightOutlined,
 } from '@ant-design/icons'
 import { StyledList, StyledItem, StyledSidebar } from '../styles/SidebarStyled'
 import { Link } from 'react-router-dom'
@@ -19,7 +19,7 @@ export function SidebarComponent() {
       <StyledList>
         <StyledItem>
           <button onClick={toggleSidebar}>
-            <ColumnWidthOutlined />
+            <VerticalRightOutlined />
           </button>
         </StyledItem>
         <StyledItem component={<Link to="/appointments/calendar" />}>

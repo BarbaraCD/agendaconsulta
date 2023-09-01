@@ -7,18 +7,15 @@ export const StyledSidebar = styled(Sidebar)`
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  width: ${({ collapsed }) => (collapsed ? '60px' : '200px')};
+  text-align: right;
+  width: ${({ collapsed }) => (collapsed ? '70px' : '200px')};
   transition: width 0.1s ease;
-
-  @media (max-width: 768px) {
-    width: ${({ collapsed }) => (collapsed ? '0px' : '60px')};
-  }
 `
 
 export const StyledList = styled(Menu)`
   background-color: ${(props) => props.theme.colors.sbcolor};
   height: 93.5vh;
-  min-height: 100%;
+  min-height: 100px;
 `
 
 export const StyledItem = styled(MenuItem)`

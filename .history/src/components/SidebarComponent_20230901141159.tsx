@@ -1,8 +1,4 @@
-import {
-  ColumnWidthOutlined,
-  ScheduleOutlined,
-  UserOutlined,
-} from '@ant-design/icons'
+import { MenuOutlined, ScheduleOutlined, UserOutlined } from '@ant-design/icons'
 import { StyledList, StyledItem, StyledSidebar } from '../styles/SidebarStyled'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'

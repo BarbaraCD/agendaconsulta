@@ -1,6 +1,10 @@
 import { Menu, MenuItem, Sidebar } from 'react-pro-sidebar'
 import styled from 'styled-components'
 
+const breakpoints = {
+  small: '768px',
+}
+
 export const StyledSidebar = styled(Sidebar)`
   font-size: ${(props) => props.theme.size.xl};
   font-weight: 500;

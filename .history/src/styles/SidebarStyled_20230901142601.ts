@@ -10,8 +10,8 @@ export const StyledSidebar = styled(Sidebar)`
   width: ${({ collapsed }) => (collapsed ? '60px' : '200px')};
   transition: width 0.1s ease;
 
-  @media (max-width: 768px) {
-    width: ${({ collapsed }) => (collapsed ? '0px' : '60px')};
+  @media (max-width: ${breakpoints.small}) {
+    width: ${({ collapsed }) => (collapsed ? '0' : '60px')};
   }
 `
 

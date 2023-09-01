@@ -17,11 +17,10 @@ export function SidebarComponent() {
   return (
     <StyledSidebar collapsed={collapsed}>
       <StyledList>
-        <StyledItem>
-          <button onClick={toggleSidebar}>
-            <ColumnWidthOutlined />
-          </button>
-        </StyledItem>
+        <button onClick={toggleSidebar}>
+          <ColumnWidthOutlined />
+        </button>
+
         <StyledItem component={<Link to="/appointments/calendar" />}>
           <ScheduleOutlined /> Consultas
         </StyledItem>

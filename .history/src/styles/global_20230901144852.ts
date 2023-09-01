@@ -23,6 +23,9 @@ export const Container = styled.div`
 
 export const SidebarGlobal = styled.div`
   width: 16%;
+  @media (max-width: 768px) {
+    background-color: red;
+  }
 `
 
 export const Content = styled.div`

@@ -15,8 +15,8 @@ export function SidebarComponent() {
   }
 
   return (
-    <StyledSidebar collapsed={collapsed}>
-      <StyledList>
+    <StyledSidebar>
+      <StyledList collapsed={collapsed}>
         <StyledItem>
           <button onClick={toggleSidebar}>
             <ColumnWidthOutlined />

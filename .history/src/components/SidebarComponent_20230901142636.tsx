@@ -6,6 +6,7 @@ import {
 import { StyledList, StyledItem, StyledSidebar } from '../styles/SidebarStyled'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import styled, { css } from 'styled-components'
 
 export function SidebarComponent() {
   const [collapsed, setCollapsed] = useState(false)

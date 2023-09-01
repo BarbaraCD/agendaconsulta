@@ -1,5 +1,6 @@
 import {
   ColumnWidthOutlined,
+  MenuOutlined,
   ScheduleOutlined,
   UserOutlined,
 } from '@ant-design/icons'

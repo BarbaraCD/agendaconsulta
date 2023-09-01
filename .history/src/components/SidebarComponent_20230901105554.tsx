@@ -1,9 +1,16 @@
 import {
-  ColumnWidthOutlined,
+  MenuOutlined,
+  MessageOutlined,
   ScheduleOutlined,
   UserOutlined,
 } from '@ant-design/icons'
-import { StyledList, StyledItem, StyledSidebar } from '../styles/SidebarStyled'
+import {
+  StyledList,
+  StyledItem,
+  StyledSidebar,
+  ContainerHeader,
+  StyleLink,
+} from '../styles/SidebarStyled'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
@@ -16,12 +23,15 @@ export function SidebarComponent() {
 
   return (
     <StyledSidebar collapsed={collapsed}>
+      <ContainerHeader>
+        <button onClick={toggleSidebar}>
+          <MenuOutlined style={{ fontSize: '16px' }} />
+        </button>
+        <StyleLink to="/">
+          <p>Agenda consulta</p>
+        </StyleLink>
+      </ContainerHeader>
       <StyledList>
-        <StyledItem>
-          <button onClick={toggleSidebar}>
-            <ColumnWidthOutlined />
-          </button>
-        </StyledItem>
         <StyledItem component={<Link to="/appointments/calendar" />}>
           <ScheduleOutlined /> Consultas
         </StyledItem>

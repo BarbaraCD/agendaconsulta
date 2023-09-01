@@ -11,7 +11,7 @@ export const StyledSidebar = styled(Sidebar)`
   transition: width 0.1s ease;
 
   @media (max-width: 768px) {
-    width: ${({ collapsed }) => (collapsed ? '0px' : '60px')};
+    width: ${({ collapsed }) => (collapsed : '60px')};
   }
 `
 

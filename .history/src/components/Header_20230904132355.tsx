@@ -3,13 +3,12 @@ import { styled } from 'styled-components'
 import { HomeOutlined } from '@ant-design/icons'
 
 const ContainerHeader = styled.div`
-  padding: 12px;
+  padding: 12px 16px;
   width: 100%;
   min-width: 200px;
   font-weight: 700;
   overflow: visible;
   background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.white};
 `
 
 const StyleLink = styled(Link)`
@@ -26,8 +25,8 @@ const StyleLink = styled(Link)`
 export function Header() {
   return (
     <ContainerHeader>
+      <HomeOutlined />
       <StyleLink to="/">
-        <HomeOutlined />
         <p>Agenda consulta</p>
       </StyleLink>
     </ContainerHeader>

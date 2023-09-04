@@ -3,7 +3,8 @@ import { styled } from 'styled-components'
 import { HomeOutlined } from '@ant-design/icons'
 
 const ContainerHeader = styled.div`
-  padding: 12px;
+  padding: 12px 16px;
+
   width: 100%;
   min-width: 200px;
   font-weight: 700;

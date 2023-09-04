@@ -17,8 +17,8 @@ export default createGlobalStyle`
   }
 `
 
-export const Container = styled.div`
-  display: flex;
+export const SidebarGlobal = styled.div`
+  width: 16%;
 `
 
 export const Content = styled.div`

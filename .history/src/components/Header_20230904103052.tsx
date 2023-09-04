@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom'
 import { styled } from 'styled-components'
 import { HomeOutlined } from '@ant-design/icons'
+import { useState } from 'react'
 
 const ContainerHeader = styled.div`
-  padding: 12px;
+  padding: 12px 16px;
   width: 100%;
   min-width: 200px;
   font-weight: 700;
   overflow: visible;
   background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.white};
 `
 
 const StyleLink = styled(Link)`
@@ -24,10 +24,16 @@ const StyleLink = styled(Link)`
 `
 
 export function Header() {
+  const [collapsed, setCollapsed] = useState(false)
+
+  const toggleSidebar = () => {
+    setCollapsed(!collapsed)
+  }
+
   return (
     <ContainerHeader>
       <StyleLink to="/">
-        <HomeOutlined />
+        <MenuOutlined onClick={toggleSidebar} />
         <p>Agenda consulta</p>
       </StyleLink>
     </ContainerHeader>

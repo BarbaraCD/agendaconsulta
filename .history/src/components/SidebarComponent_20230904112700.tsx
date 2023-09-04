@@ -14,8 +14,6 @@ export function SidebarComponent() {
     window.addEventListener('resize', handleResize)
     if (isSmaller) {
       setCollapsed(true)
-    } else {
-      setCollapsed(false)
     }
     return () => {
       window.removeEventListener('resize', handleResize)

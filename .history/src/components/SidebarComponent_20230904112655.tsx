@@ -1,4 +1,8 @@
-import { ScheduleOutlined, UserOutlined } from '@ant-design/icons'
+import {
+  ColumnWidthOutlined,
+  ScheduleOutlined,
+  UserOutlined,
+} from '@ant-design/icons'
 import { StyledList, StyledItem, StyledSidebar } from '../styles/SidebarStyled'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
@@ -14,8 +18,6 @@ export function SidebarComponent() {
     window.addEventListener('resize', handleResize)
     if (isSmaller) {
       setCollapsed(true)
-    } else {
-      setCollapsed(false)
     }
     return () => {
       window.removeEventListener('resize', handleResize)

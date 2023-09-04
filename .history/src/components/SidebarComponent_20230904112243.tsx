@@ -1,30 +1,39 @@
-import { ScheduleOutlined, UserOutlined } from '@ant-design/icons'
+import {
+  ColumnWidthOutlined,
+  ScheduleOutlined,
+  UserOutlined,
+} from '@ant-design/icons'
 import { StyledList, StyledItem, StyledSidebar } from '../styles/SidebarStyled'
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export function SidebarComponent() {
   const [collapsed, setCollapsed] = useState(false)
-  const [isSmaller, setIsSmaller] = useState(window.innerWidth <= 768)
+
+  const toggleSidebar = () => {
+    setCollapsed(!collapsed)
+  }
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmaller(window.innerWidth <= 768)
+      setIsMobile(window.innerWidth <= 768) // Atualize aqui a largura máxima para dispositivos móveis, se necessário
     }
+
     window.addEventListener('resize', handleResize)
-    if (isSmaller) {
-      setCollapsed(true)
-    } else {
-      setCollapsed(false)
-    }
+
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  }, [isSmaller])
+  }, [])
 
   return (
     <StyledSidebar collapsed={collapsed}>
       <StyledList>
+        <StyledItem>
+          <button onClick={toggleSidebar}>
+            <ColumnWidthOutlined />
+          </button>
+        </StyledItem>
         <StyledItem component={<Link to="/appointments/calendar" />}>
           <ScheduleOutlined /> Consultas
         </StyledItem>

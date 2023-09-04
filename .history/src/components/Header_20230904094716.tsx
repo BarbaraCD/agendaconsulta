@@ -1,15 +1,19 @@
 import { Link } from 'react-router-dom'
 import { styled } from 'styled-components'
-import { HomeOutlined } from '@ant-design/icons'
+import { MenuOutlined } from '@ant-design/icons'
+import { useState } from 'react'
+import { SidebarComponent } from './SidebarComponent'
 
 const ContainerHeader = styled.div`
-  padding: 12px;
+  padding: 12px 16px;
   width: 100%;
   min-width: 200px;
   font-weight: 700;
   overflow: visible;
-  background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.colors.primary};
+  display: flex;
+  justify-content: center;
 `
 
 const StyleLink = styled(Link)`
@@ -24,10 +28,17 @@ const StyleLink = styled(Link)`
 `
 
 export function Header() {
+  const [collapsed, setCollapsed] = useState(false)
+
+  const toggleSidebar = () => {
+    setCollapsed(!collapsed)
+  }
+
   return (
     <ContainerHeader>
+      <MenuOutlined onClick={toggleSidebar} />
+      {collapsed && <SidebarComponent />}
       <StyleLink to="/">
-        <HomeOutlined />
         <p>Agenda consulta</p>
       </StyleLink>
     </ContainerHeader>

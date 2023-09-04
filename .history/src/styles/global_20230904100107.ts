@@ -21,6 +21,10 @@ export const Container = styled.div`
   display: flex;
 `
 
+export const SidebarGlobal = styled.div`
+  width: 16%;
+`
+
 export const Content = styled.div`
   flex: 1;
   margin: 0 1rem;

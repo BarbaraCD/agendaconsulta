@@ -17,7 +17,7 @@ export const StyledList = styled(Menu)`
 
 export const StyledItem = styled(MenuItem)`
   cursor: pointer;
-  padding: 12px 0;
+  padding: 0 12px;
 
   background-color: ${(props) => props.theme.colors.sbcolor};
   line-height: 1.3rem;

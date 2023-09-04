@@ -1,8 +1,4 @@
-import {
-  MedicineBoxOutlined,
-  ScheduleOutlined,
-  UserOutlined,
-} from '@ant-design/icons'
+import { ScheduleOutlined, UserOutlined } from '@ant-design/icons'
 import { StyledList, StyledItem, StyledSidebar } from '../styles/SidebarStyled'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
@@ -26,8 +22,26 @@ export function SidebarComponent() {
     }
   }, [isSmaller])
 
+  const handleMouseEnter = () => {
+    if (!collapsed) {
+      document.querySelectorAll('.show-text').forEach((element) => {
+        element.classList.add('show-text')
+      })
+    }
+  }
+
+  const handleMouseLeave = () => {
+    document.querySelectorAll('.show-text').forEach((element) => {
+      element.classList.remove('show-text')
+    })
+  }
+
   return (
-    <StyledSidebar collapsed={collapsed}>
+    <StyledSidebar
+      collapsed={collapsed}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <StyledList>
         <StyledItem component={<Link to="/appointments/calendar" />}>
           <ScheduleOutlined /> <span className="show-text">Consultas</span>
@@ -36,7 +50,7 @@ export function SidebarComponent() {
           <UserOutlined /> <span className="show-text">Pacientes</span>
         </StyledItem>
         <StyledItem component={<Link to="/doctors/list" />}>
-          <MedicineBoxOutlined /> <span className="show-text">Médicos</span>
+          <UserOutlined /> <span className="show-text">Médicos</span>
         </StyledItem>
       </StyledList>
     </StyledSidebar>

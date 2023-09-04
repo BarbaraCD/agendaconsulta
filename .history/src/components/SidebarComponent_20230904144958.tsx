@@ -1,8 +1,4 @@
-import {
-  MedicineBoxOutlined,
-  ScheduleOutlined,
-  UserOutlined,
-} from '@ant-design/icons'
+import { ScheduleOutlined, UserOutlined } from '@ant-design/icons'
 import { StyledList, StyledItem, StyledSidebar } from '../styles/SidebarStyled'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
@@ -36,7 +32,7 @@ export function SidebarComponent() {
           <UserOutlined /> <span className="show-text">Pacientes</span>
         </StyledItem>
         <StyledItem component={<Link to="/doctors/list" />}>
-          <MedicineBoxOutlined /> <span className="show-text">Médicos</span>
+          <UserOutlined /> <span className="show-text">Médicos</span>
         </StyledItem>
       </StyledList>
     </StyledSidebar>

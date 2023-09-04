@@ -1,0 +1,51 @@
+import { Menu, MenuItem, Sidebar } from 'react-pro-sidebar'
+import styled from 'styled-components'
+
+export const StyledSidebar = styled(Sidebar)`
+  font-size: ${(props) => props.theme.size.xl};
+  font-weight: 500;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+`
+
+export const StyledList = styled(Menu)`
+  background-color: ${(props) => props.theme.colors.sbcolor};
+  height: 93.5vh;
+  min-height: 100%;
+`
+
+export const StyledItem = styled(MenuItem)`
+  cursor: pointer;
+  padding: 12px 0;
+
+  background-color: ${(props) => props.theme.colors.sbcolor};
+  line-height: 1.3rem;
+  color: ${(props) => props.theme.colors.primary};
+
+  button {
+    border: none;
+    color: ${(props) => props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.sbcolor};
+    font-size: ${(props) => props.theme.size.xl};
+  }
+
+  /* Adicione a classe 'show-text' ao ícone quando o mouse passar sobre o elemento pai */
+  .StyledItem:hover .anticon {
+    margin-right: 8px; /* Espaçamento entre o ícone e o texto (ajuste conforme necessário) */
+    transition: margin-right 0.3s; /* Animação suave */
+  }
+
+  /* Estilize o ícone e o texto para aparecerem lado a lado */
+  .StyledItem:hover .anticon + span {
+    display: inline-block;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+
+  /* Oculte o texto por padrão */
+  .StyledItem .anticon + span {
+    display: none;
+    opacity: 0;
+  }
+`
